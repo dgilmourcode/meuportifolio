@@ -30,7 +30,7 @@
   <!-- <link rel="icon" type="image/png" sizes="16x16" href="/assets/dgilmourcode_icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/dgilmourcode_icon.png">
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/dgilmourcode_icon.png"> -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/src/assets/dgilmourcode_icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="src/assets/dgilmourcode_icon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -192,113 +192,143 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center px-6 relative z-10 pt-20" id="sobre">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center w-full">
+  <section class="min-h-screen flex items-center relative z-10 px-6 pt-20" id="sobre">
 
-      <!-- Sobre -->
-      <div class="fade-in opacity-0 translate-y-8 transition-all duration-700">
-        <div class="flex items-center gap-2 text-text-muted mb-4">
-          <span class="text-lg font-medium mt-16 mb-4"> Desenvolvedor Web e Analista de Dados </span>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start w-full">
+
+      <!-- LEFT: TEXT -->
+      <div class="mt-8 mb-6 fade-in opacity-0 translate-y-6 transition-all duration-700 self-center">
+
+        <!-- Role -->
+        <div class="text-text-muted text-xs uppercase tracking-widest mb-4">
+          Desenvolvedor Web <span class="text-accent mt-1">▸</span>
+          Analista de Dados <span class="text-accent mt-1">▸</span>
+          BI & Automação
         </div>
 
-        <h1
-          class="text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 font-sans leading-tight tracking-tight inline-flex items-center gap-2">
-          David
-          <span class="text-[#69d2e7]">Gilmour</span>
-          <span class="w-4 h-12 md:h-16 bg-[#69d2e7] animate-pulse"></span>
+        <!-- Name -->
+        <h1 class="text-5xl md:text-6xl font-semibold mb-5 leading-tight tracking-tight">
+          David <span class="text-accent">Gilmour</span>
         </h1>
 
-        <p class="text-text-muted text-lg mb-8 max-w-md leading-relaxed">
-          Especialista em Dados e Sistemas com mais de 10 anos de trajetória transformando
-          ecossistemas complexos em operações de alta performance.
-          Nivel Júnior em desenvolvimento <strong>Html</strong> e <strong>CSS</strong> com
-          <strong>JavaScript</strong> para web.
+        <!-- Subtitle -->
+        <p class="text-text-muted text-base mb-5 max-w-xl leading-relaxed">
+          Profissional com mais de <strong>10 anos de experiência</strong> em dados, sistemas e automação de processos,
+          transformando operações complexas em soluções escaláveis e orientadas a performance.
         </p>
 
-        <p class="text-text-muted text-lg mb-8 max-w-md leading-relaxed">
-          Expert em <strong>Business Intelligence</strong> e <strong>Low-Code
-            (AppSheet)</strong>, com histórico
-          comprovado na automação de fluxos críticos e geração de insights estratégicos.
-          Aplicações técnicas focadas em <strong>ROI</strong>, combinando domínio em <strong>Power
-            BI</strong>
-          para orquestrar <strong>Storytelling</strong> de dados
-          que impulsionam decisões executivas e eficiência operacional em larga escala.
+        <p class="text-text-muted text-base mb-5 max-w-xl leading-relaxed">
+          Nivel júnior em <span>Desenvolvimento Web</span> com <strong>HTML</strong>, <strong>CSS</strong> e
+          <strong>JavaScript</strong>.
         </p>
 
-        <div class="flex gap-8 mb-8">
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-accent-light font-display">
-              10+
-            </div>
-            <div class="text-xs text-text-muted uppercase tracking-wider mt-1">
-              Anos de Experiência
-            </div>
+        <p class="text-text-muted text-base mb-7 max-w-xl leading-relaxed">
+          Especialista em <strong>Business Intelligence</strong>, <strong>Power BI</strong> e
+          <strong>Low-Code (AppSheet)</strong>, com foco em dashboards executivos e automação de decisões estratégicas.
+        </p>
+
+        <!-- Stats (Apple style compact) -->
+        <div class="flex gap-10 mb-8">
+          <div>
+            <div class="text-3xl font-bold text-accent">10+</div>
+            <div class="text-[10px] text-text-muted uppercase tracking-widest">Anos</div>
           </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-accent-light font-display">
-              6+
-            </div>
-            <div class="text-xs text-text-muted uppercase tracking-wider mt-1">
-              Empresas
-            </div>
+
+          <div>
+            <div class="text-3xl font-bold text-accent">6+</div>
+            <div class="text-[10px] text-text-muted uppercase tracking-widest">Empresas</div>
           </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-accent-light font-display">
-              ∞
-            </div>
-            <div class="text-xs text-text-muted uppercase tracking-wider mt-1">
-              Soluções Entregues
-            </div>
+
+          <div>
+            <div class="text-3xl font-bold text-accent">∞</div>
+            <div class="text-[10px] text-text-muted uppercase tracking-widest">Soluções</div>
           </div>
         </div>
 
-        <div class="flex flex-wrap gap-4">
-          <a href="#contato"
-            class="inline-flex items-center gap-2 bg-accent text-primary px-6 py-3 rounded-lg font-semibold hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(107,43,245,0.4)] transition-all duration-300">
-            <i data-lucide="mail" class="w-5 h-5"></i>
-            Fale Comigo
+        <!-- CTA -->
+        <div class="flex flex-wrap gap-3">
+          <a href="#contato" class="inline-flex items-center gap-2 bg-accent text-primary px-5 py-2.5 rounded-lg font-semibold
+            hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(107,43,245,0.35)] transition-all duration-300">
+
+            <i class="fa-solid fa-envelope"></i>
+            Fale comigo
           </a>
-          <a href="#projetos"
-            class="inline-flex items-center gap-2 border-2 border-secondary text-white px-6 py-3 rounded-lg font-semibold hover:border-accent hover:text-accent transition-all duration-300">
-            <i data-lucide="folder-open" class="w-5 h-5"></i>
-            Ver Projetos
+
+          <a href="#projetos" class="inline-flex items-center gap-2 border border-white/10 text-white px-5 py-2.5 rounded-lg font-semibold
+            hover:border-accent hover:text-accent transition-all duration-300">
+
+            <i class="fa-solid fa-folder-open"></i>
+            Ver projetos
           </a>
         </div>
+
       </div>
 
-      <!-- Board Tech Skill -->
-      <div class="flex justify-center fade-in opacity-0 translate-y-8 transition-all duration-700 delay-200">
-        <div
-          class="bg-primary p-8 rounded-2xl border border-accent/20 shadow-[0_20px_60px_rgba(0,0,0,0.5)] relative overflow-hidden group">
-          <div
-            class="absolute inset-0 bg-[linear-gradient(45deg,transparent,rgba(112,11,245,0.1),transparent)] translate-x-[-100%] group-hover:animate-shimmer">
+      <!-- RIGHT: BOARD -->
+      <div
+        class="flex justify-center mt-12 md:justify-end items-center fade-in opacity-0 translate-y-6 transition-all duration-700 delay-200">
+
+        <div class="bg-primary mt-8 p-5 rounded-2xl border border-white/10
+          shadow-[0_25px_70px_rgba(0,0,0,0.45)] relative group w-[300px]
+          -translate-y-6 md:-translate-y-10 transition-transform duration-300 hover:-translate-y-12">
+
+          <!-- glow subtle -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500
+            bg-[radial-gradient(circle_at_center,rgba(107,43,245,0.18),transparent_70%)]"></div>
+
+          <!-- Avatar -->
+          <div class="relative z-10 flex justify-center">
+            <div class="w-44 h-44 flex items-center justify-center overflow-hidden">
+              <img src="src/assets/dgilmourcode_vertical.png"
+                class="h-28 object-contain transition-transform duration-300 group-hover:scale-110"
+                alt="David Gilmour logo">
+            </div>
           </div>
 
-          <!-- Avatar com lazy load nativo -->
-          <div
-            class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-primary flex items-center justify-center text-6xl md:text-7xl font-bold text-primary font-display border-4 border-primary relative z-10 animate-float will-change-transform">
+          <!-- Skills -->
+          <div class="relative z-10 flex flex-wrap gap-2 mt-4 justify-center">
 
-            <!-- Logotipo dgilmourcode -->
-            <a href="#habilidades"
-              class="flex items-center justify-center w-full h-full group transition-transform hover:scale-105">
+            <span class="tech-badge flex items-center gap-1.5">
+              <i class="fa-solid fa-chart-column text-xs opacity-70"></i>
+              Power BI
+            </span>
 
-              <img src="/src/assets/dgilmourcode_vertical.png" class="h-36 mx-auto object-contain" alt="">
+            <span class="tech-badge flex items-center gap-1.5">
+              <i class="fa-brands fa-python text-xs opacity-70"></i>
+              Python
+            </span>
 
-            </a>
+            <span class="tech-badge flex items-center gap-1.5">
+              <i class="fa-brands fa-js text-xs opacity-70"></i>
+              JS
+            </span>
+
+            <span class="tech-badge flex items-center gap-1.5">
+              <i class="fa-brands fa-html5 text-xs opacity-70"></i>
+              HTML
+            </span>
+
+            <span class="tech-badge flex items-center gap-1.5">
+              <i class="fa-brands fa-css3-alt text-xs opacity-70"></i>
+              CSS
+            </span>
+
+            <span class="tech-badge flex items-center gap-1.5">
+              <i class="fa-solid fa-mobile-screen text-xs opacity-70"></i>
+              AppSheet
+            </span>
+
+            <span class="tech-badge flex items-center gap-1.5">
+              <i class="fa-solid fa-database text-xs opacity-70"></i>
+              SQL
+            </span>
+
           </div>
 
-          <div class="flex flex-wrap gap-2 mt-6 justify-center max-w-[350px] mx-auto">
-            <span class="tech-badge">Power BI</span>
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">AppSheet</span>
-            <span class="tech-badge">Excel</span>
-            <span class="tech-badge">SQL</span>
-            <span class="tech-badge">Design</span>
-          </div>
         </div>
+
       </div>
-      <!-- the and board tech skill -->
+
     </div>
   </section>
 
