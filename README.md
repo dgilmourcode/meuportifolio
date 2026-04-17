@@ -1,5 +1,3 @@
-[![Deploy Status](https://github.com/dgilmourcode/meuportifolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/dgilmourcode/meuportifolio/actions/workflows/deploy.yml)
-
 
 # 🚀 David Gilmour | Portfolio Profissional
 
