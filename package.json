@@ -1,0 +1,39 @@
+{
+  "name": "meuportifolio",
+  "version": "1.0.0",
+  "description": "Portfolio pessoal desenvolvido com tecnologias modernas, focado em performance, acessibilidade e design responsivo.",
+  "type": "module",
+  "main": "dist/index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "keywords": [
+    "portfolio",
+    "landing-page",
+    "vite",
+    "tailwindcss",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "David Gilmour",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgilmourcode/meuportifolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dgilmourcode/meuportifolio/issues"
+  },
+  "homepage": "https://dgilmourcode.github.io/meuportifolio/",
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.0.8"
+  }
+}
