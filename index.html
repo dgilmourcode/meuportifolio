@@ -9,44 +9,22 @@
   <meta name="description" content="Portfolio de David Gilmour - Analista de Dados e Desenvolvedor" />
   <meta name="theme-color" content="#0f172a" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dgilmourcode.com/" />
-  <meta property="og:title" content="David Gilmour | Desenvolvedor Web & Analista de Dados" />
-  <meta property="og:description"
-    content="Portfolio profissional de David Gilmour. Especialista em BI, Power BI, Python e automação de processos. +10 anos de experiência." />
-  <meta property="og:image" content="https://dgilmourcode.com/src/assets/og-image.png" />
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://dgilmourcode.com/" />
-  <meta property="twitter:title" content="David Gilmour | Desenvolvedor Web & Analista de Dados" />
-  <meta property="twitter:description"
-    content="Portfolio profissional de David Gilmour. Especialista em BI, Power BI, Python e automação de processos." />
-  <meta property="twitter:image" content="https://dgilmourcode.com/og-image.png" />
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://dgilmourcode.com/" />
-</head>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<!-- Performance: Preconnect -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/src/assets/dgilmourcode_icon.png" />
 
-<!-- Fonts -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-  rel="stylesheet" />
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="192x192" href="/src/assets/dgilmourcode_icon.png" />
-
-<title>David Gilmour | Portfólio</title>
-
-
+  <title>David Gilmour | Portfólio</title>
 </head>
 
 <body class="bg-primary text-white font-sans overflow-x-hidden antialiased">
@@ -62,1124 +40,1381 @@
   <div class="mesh-gradient"></div>
 
   <!-- Navigation -->
-  <nav
-    class="fixed w-full z-50 bg-primary/80 backdrop-blur-xl border-b border-white/10 px-6 py-4 transition-all duration-300"
-    id="navbar">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
+  <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
+    <!-- Background com Blur -->
+    <div class="absolute inset-0 bg-primary/70 backdrop-blur-xl border-b border-white/5"></div>
 
-      <!-- Logo -->
-      <a href="#sobre" class="flex items-center group transition-transform hover:scale-105 magnetic-btn">
-        <img src="src/assets/dgilmourcode_horizontal.png" alt="logo-dgilmourcode"
-          class="h-10 max-w-[220px] object-contain" />
-      </a>
+    <div class="relative max-w-7xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
 
-      <!-- Desktop Menu + Mobile Button (DENTRO da mesma div) -->
-      <div class="flex items-center gap-8">
+        <!-- Logo Minimalista -->
+        <a href="#sobre" class="group flex items-center gap-3 transition-transform hover:scale-105">
+          <img src="/src/assets/dgilmourcode_icon.png" alt="Logo"
+            class="h-10 w-10 object-contain group-hover:rotate-6 transition-transform duration-300">
+          <span class="text-lg font-bold tracking-tight hidden sm:block">dgilmour<span
+              class="text-accent">code</span></span>
+        </a>
 
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex items-center gap-8 text-sm list-none">
+        <!-- Desktop Menu - Ultra Clean (Compacto para VS Code) -->
+        <ul class="hidden md:flex items-center gap-1 list-none">
           <li><a href="#sobre"
-              class="nav-link text-text-muted hover:text-white transition-colors relative group py-2">Sobre</a></li>
+              class="nav-link px-4 py-2 rounded-full text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 transition-all duration-300">Sobre</a>
+          </li>
           <li><a href="#projetos"
-              class="nav-link text-text-muted hover:text-white transition-colors relative group py-2">Projetos</a></li>
+              class="nav-link px-4 py-2 rounded-full text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 transition-all duration-300">Projetos</a>
+          </li>
           <li><a href="#experiencia"
-              class="nav-link text-text-muted hover:text-white transition-colors relative group py-2">Experiência</a>
+              class="nav-link px-4 py-2 rounded-full text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 transition-all duration-300">Experiência</a>
           </li>
           <li><a href="#habilidades"
-              class="nav-link text-text-muted hover:text-white transition-colors relative group py-2">Habilidades</a>
+              class="nav-link px-4 py-2 rounded-full text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 transition-all duration-300">Habilidades</a>
+          </li>
+          <li><a href="#certificacoes"
+              class="nav-link px-4 py-2 rounded-full text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 transition-all duration-300">Certificações</a>
           </li>
           <li><a href="#depoimentos"
-              class="nav-link text-text-muted hover:text-white transition-colors relative group py-2">Depoimentos</a>
+              class="nav-link px-4 py-2 rounded-full text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 transition-all duration-300">Depoimentos</a>
           </li>
           <li><a href="#blog"
-              class="nav-link text-text-muted hover:text-white transition-colors relative group py-2">Blog</a></li>
-          <li><a href="#certificacoes"
-              class="nav-link text-text-muted hover:text-white transition-colors relative group py-2">Certificações</a>
+              class="nav-link px-4 py-2 rounded-full text-sm font-medium text-text-muted hover:text-white hover:bg-white/5 transition-all duration-300">Blog</a>
           </li>
           <li><a href="#contato"
-              class="nav-link text-text-muted hover:text-white transition-colors relative group py-2">Contato</a></li>
+              class="nav-link px-5 py-2.5 rounded-full text-sm font-semibold bg-accent text-white hover:bg-accent-light hover:shadow-lg hover:shadow-accent/30 transition-all duration-300">Contato</a>
+          </li>
         </ul>
 
         <!-- Mobile Menu Button -->
-        <button class="md:hidden text-white p-2" id="mobile-menu-btn" aria-label="Abrir menu">
-          <i class="fa-solid fa-bars text-xl"></i>
+        <button class="md:hidden p-2 rounded-lg hover:bg-white/5 transition-colors" id="mobile-menu-btn"
+          aria-label="Menu">
+          <i class="fa-solid fa-bars text-xl text-white"></i>
         </button>
 
       </div>
     </div>
 
-    <!-- Mobile Menu (FORA da div principal) -->
+    <!-- Mobile Menu - Full Screen Overlay -->
     <div
-      class="md:hidden hidden absolute top-full left-0 w-full bg-secondary/95 backdrop-blur-xl border-b border-white/10 py-4 px-6"
+      class="md:hidden fixed inset-0 bg-primary/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300"
       id="mobile-menu">
-      <ul class="flex flex-col gap-4 list-none">
-        <li><a href="#sobre" class="text-text-muted hover:text-white transition-colors block py-2">Sobre</a></li>
-        <li><a href="#projetos" class="text-text-muted hover:text-white transition-colors block py-2">Projetos</a></li>
-        <li><a href="#experiencia" class="text-text-muted hover:text-white transition-colors block py-2">Experiência</a>
-        </li>
-        <li><a href="#habilidades" class="text-text-muted hover:text-white transition-colors block py-2">Habilidades</a>
-        </li>
-        <li><a href="#depoimentos" class="text-text-muted hover:text-white transition-colors block py-2">Depoimentos</a>
-        </li>
-        <li><a href="#blog" class="text-text-muted hover:text-white transition-colors block py-2">Blog</a></li>
-        <li><a href="#certificacoes"
-            class="text-text-muted hover:text-white transition-colors block py-2">Certificações</a></li>
-        <li><a href="#contato" class="text-text-muted hover:text-white transition-colors block py-2">Contato</a></li>
-      </ul>
+      <button class="absolute top-6 right-6 p-2 rounded-lg hover:bg-white/5 transition-colors" id="mobile-menu-close">
+        <i class="fa-solid fa-xmark text-2xl text-white"></i>
+      </button>
+
+      <div class="flex flex-col justify-center h-full px-8">
+        <div class="mb-12">
+          <img src="/src/assets/dgilmourcode_icon.png" alt="Logo" class="h-16 w-16 object-contain mb-4">
+          <span class="text-2xl font-bold">dgilmour<span class="text-accent">code</span></span>
+        </div>
+
+        <ul class="space-y-4">
+          <li><a href="#sobre"
+              class="mobile-nav-link block text-2xl font-semibold text-text-muted hover:text-accent transition-colors py-3 border-b border-white/5">Sobre</a>
+          </li>
+          <li><a href="#projetos"
+              class="mobile-nav-link block text-2xl font-semibold text-text-muted hover:text-accent transition-colors py-3 border-b border-white/5">Projetos</a>
+          </li>
+          <li><a href="#experiencia"
+              class="mobile-nav-link block text-2xl font-semibold text-text-muted hover:text-accent transition-colors py-3 border-b border-white/5">Experiência</a>
+          </li>
+          <li><a href="#habilidades"
+              class="mobile-nav-link block text-2xl font-semibold text-text-muted hover:text-accent transition-colors py-3 border-b border-white/5">Habilidades</a>
+          </li>
+          <li><a href="#certificacoes"
+              class="mobile-nav-link block text-2xl font-semibold text-text-muted hover:text-accent transition-colors py-3 border-b border-white/5">Certificações</a>
+          </li>
+          <li><a href="#depoimentos"
+              class="mobile-nav-link block text-2xl font-semibold text-text-muted hover:text-accent transition-colors py-3 border-b border-white/5">Depoimentos</a>
+          </li>
+          <li><a href="#blog"
+              class="mobile-nav-link block text-2xl font-semibold text-text-muted hover:text-accent transition-colors py-3 border-b border-white/5">Blog</a>
+          </li>
+          <li><a href="#contato" class="mobile-nav-link block text-2xl font-semibold text-accent py-3">Contato →</a>
+          </li>
+        </ul>
+
+        <div class="mt-12 flex gap-4">
+          <a href="https://github.com/dgilmourcode/" target="_blank"
+            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors"><i
+              class="fa-brands fa-github text-xl text-text-muted hover:text-white"></i></a>
+          <a href="https://www.linkedin.com/in/dgilmourcode/" target="_blank"
+            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors"><i
+              class="fa-brands fa-linkedin text-xl text-text-muted hover:text-white"></i></a>
+          <a href="https://wa.me/5586994936797" target="_blank"
+            class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent transition-colors"><i
+              class="fa-brands fa-whatsapp text-xl text-text-muted hover:text-white"></i></a>
+        </div>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center relative z-10 px-6 pt-20" id="sobre">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start w-full">
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden px-6" id="sobre">
+    <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary to-secondary opacity-80"></div>
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse-slow"
+      style="animation-delay: 2s;"></div>
 
-      <!-- LEFT: TEXT -->
-      <div class="mt-8 mb-6 self-center">
+    <div class="relative z-10 max-w-5xl mx-auto text-center pt-20 pb-12">
+      <div
+        class="inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 fade-in-up">
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+        <span class="text-xs uppercase tracking-widest text-text-muted font-medium">Disponível para novos
+          projetos</span>
+      </div>
 
-        <!-- Role -->
-        <div class="text-text-muted text-xs uppercase tracking-widest mb-4 reveal-text">
-          Desenvolvedor Web <span class="text-accent mt-1">▸</span>
-          Analista de Dados <span class="text-accent mt-1">▸</span>
-          BI & Automação
+      <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-[0.9] tracking-tighter fade-in-up"
+        style="animation-delay: 0.1s;">
+        David <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-600">Gilmour</span>
+      </h1>
+
+      <p class="text-xl md:text-3xl text-text-muted font-light mb-6 max-w-3xl mx-auto leading-relaxed fade-in-up"
+        style="animation-delay: 0.2s;">
+        Desenvolvedor Web & Analista de Dados
+      </p>
+
+      <p class="text-base md:text-lg text-text-muted/70 max-w-2xl mx-auto mb-12 leading-relaxed fade-in-up"
+        style="animation-delay: 0.3s;">
+        Transformo dados em decisões estratégicas e código em soluções escaláveis.
+        <span class="text-white font-medium">+10 anos</span> criando impacto através de tecnologia, BI e automação.
+      </p>
+
+      <div class="flex justify-center gap-8 md:gap-16 mb-12 fade-in-up" style="animation-delay: 0.4s;">
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-white mb-1">10+</div>
+          <div class="text-xs uppercase tracking-widest text-text-muted">Anos Exp.</div>
         </div>
-
-        <!-- Name with Animation -->
-        <h1 class="text-5xl md:text-6xl font-semibold mb-5 leading-tight tracking-tight">
-          <span class="reveal-text inline-block">David</span>
-          <span class="text-accent reveal-text inline-block" style="animation-delay: 0.1s">Gilmour</span>
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="text-text-muted text-base mb-5 max-w-xl leading-relaxed reveal-text" style="animation-delay: 0.2s">
-          Profissional com mais de <strong>10 anos de experiência</strong> em dados, sistemas e automação de processos,
-          transformando operações complexas em soluções escaláveis e orientadas a performance.
-        </p>
-
-        <p class="text-text-muted text-base mb-5 max-w-xl leading-relaxed reveal-text" style="animation-delay: 0.3s">
-          Nivel júnior em <span>Desenvolvimento Web</span> com <strong>HTML</strong>, <strong>CSS</strong> e
-          <strong>JavaScript</strong>.
-        </p>
-
-        <p class="text-text-muted text-base mb-7 max-w-xl leading-relaxed reveal-text" style="animation-delay: 0.4s">
-          Especialista em <strong>Business Intelligence</strong>, <strong>Power BI</strong> e
-          <strong>Low-Code (AppSheet)</strong>, com foco em dashboards e automação de decisões estratégicas.
-        </p>
-
-        <!-- Stats -->
-        <div class="flex gap-10 mb-8 reveal-text" style="animation-delay: 0.5s">
-          <div>
-            <div class="text-3xl font-bold text-accent">10+</div>
-            <div class="text-[10px] text-text-muted uppercase tracking-widest">Anos</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-accent">6+</div>
-            <div class="text-[10px] text-text-muted uppercase tracking-widest">Empresas</div>
-          </div>
-          <div>
-            <div class="text-3xl font-bold text-accent">∞</div>
-            <div class="text-[10px] text-text-muted uppercase tracking-widest">Soluções</div>
-          </div>
+        <div class="w-px h-16 bg-white/10 hidden md:block"></div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-white mb-1">6+</div>
+          <div class="text-xs uppercase tracking-widest text-text-muted">Empresas</div>
         </div>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap gap-3 reveal-text" style="animation-delay: 0.6s">
-          <a href="#contato"
-            class="magnetic-btn inline-flex items-center gap-2 bg-accent text-primary px-5 py-2.5 rounded-lg font-semibold hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(107,43,245,0.35)] transition-all duration-300">
-            <i class="fa-solid fa-envelope"></i>
-            Fale comigo
-          </a>
-          <a href="#projetos"
-            class="magnetic-btn inline-flex items-center gap-2 border border-white/10 text-white px-5 py-2.5 rounded-lg font-semibold hover:border-accent hover:text-accent transition-all duration-300">
-            <i class="fa-solid fa-folder-open"></i>
-            Ver projetos
-          </a>
+        <div class="w-px h-16 bg-white/10 hidden md:block"></div>
+        <div class="text-center">
+          <div class="text-4xl md:text-5xl font-bold text-white mb-1">∞</div>
+          <div class="text-xs uppercase tracking-widest text-text-muted">Soluções</div>
         </div>
       </div>
 
-      <!-- RIGHT: BOARD -->
-      <div class="flex justify-center mt-12 md:justify-end items-center">
-        <div
-          class="bg-primary mt-8 p-5 rounded-2xl border border-white/10 shadow-[0_25px_70px_rgba(0,0,0,0.45)] relative group w-[300px] -translate-y-6 md:-translate-y-10 transition-transform duration-300 hover:-translate-y-12 tilt-card">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up"
+        style="animation-delay: 0.5s;">
+        <a href="#contato"
+          class="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-primary font-semibold text-lg hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105 shadow-2xl shadow-white/10">
+          <i
+            class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+          Vamos Conversar
+        </a>
+        <a href="#projetos"
+          class="group inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 text-white font-semibold text-lg hover:bg-white/10 hover:border-white/40 transition-all duration-300">
+          <i class="fa-solid fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+          Ver Projetos
+        </a>
+      </div>
 
-          <!-- Glow -->
-          <div
-            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_center,rgba(107,43,245,0.18),transparent_70%)]">
-          </div>
-
-          <!-- Avatar -->
-          <div class="relative z-10 flex justify-center image-reveal-container">
-            <div class="w-44 h-44 flex items-center justify-center overflow-hidden">
-              <img src="src/assets/dgilmourcode_vertical.png"
-                class="h-28 object-contain transition-transform duration-300 group-hover:scale-110 reveal-image"
-                alt="David Gilmour logo">
-            </div>
-          </div>
-
-          <!-- Skills -->
-          <div class="relative z-10 flex flex-wrap gap-2 mt-4 justify-center">
-            <span class="skill-tag flex items-center gap-1.5">
-              <i class="fa-solid fa-chart-column text-xs opacity-70"></i>
-              Power BI
-            </span>
-            <span class="skill-tag flex items-center gap-1.5">
-              <i class="fa-brands fa-python text-xs opacity-70"></i>
-              Python
-            </span>
-            <span class="skill-tag flex items-center gap-1.5">
-              <i class="fa-brands fa-js text-xs opacity-70"></i>
-              JS
-            </span>
-            <span class="skill-tag flex items-center gap-1.5">
-              <i class="fa-brands fa-html5 text-xs opacity-70"></i>
-              HTML
-            </span>
-            <span class="skill-tag flex items-center gap-1.5">
-              <i class="fa-brands fa-css3-alt text-xs opacity-70"></i>
-              CSS
-            </span>
-            <span class="skill-tag flex items-center gap-1.5">
-              <i class="fa-solid fa-mobile-screen text-xs opacity-70"></i>
-              AppSheet
-            </span>
-            <span class="skill-tag flex items-center gap-1.5">
-              <i class="fa-solid fa-database text-xs opacity-70"></i>
-              SQL
-            </span>
-          </div>
-        </div>
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <i class="fa-solid fa-chevron-down text-text-muted/50 text-xl"></i>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section - TODOS OS 6 PROJETOS -->
-  <section id="projetos" class="py-24 px-6 relative z-10">
-    <div class="max-w-7xl mx-auto">
+  <!-- Projects Section -->
+  <section id="projetos" class="py-32 px-6 relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none">
+    </div>
 
-      <!-- Header -->
-      <div class="text-center mb-10 fade-in-section">
-        <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">
-          Projetos & Cases de Sucesso
-        </h2>
-        <div class="w-16 h-1 bg-accent mx-auto rounded-full mb-4"></div>
-        <p class="text-text-muted max-w-2xl mx-auto text-sm">
-          Soluções reais com foco em performance, automação e impacto operacional.
-        </p>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-20 fade-in-section">
+        <span
+          class="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs uppercase tracking-widest font-semibold mb-4">Portfólio</span>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Projetos Selecionados</h2>
+        <p class="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">Soluções reais que geraram impacto
+          mensurável em operações corporativas</p>
       </div>
 
-      <!-- Filters -->
-      <div class="flex justify-center gap-2 mb-8 flex-wrap fade-in-section">
-        <button class="filter-btn active bg-accent text-white px-4 py-2 rounded-full text-xs transition hover:scale-105"
+      <div class="flex justify-center gap-3 mb-16 flex-wrap fade-in-section">
+        <button
+          class="filter-btn active px-6 py-3 rounded-full bg-accent text-white text-sm font-medium transition-all hover:scale-105 shadow-lg shadow-accent/30"
           data-filter="all">Todos</button>
         <button
-          class="filter-btn bg-transparent border border-white/10 text-text-muted px-4 py-2 rounded-full text-xs hover:border-accent hover:text-white transition"
-          data-filter="dados">Dados</button>
+          class="filter-btn px-6 py-3 rounded-full bg-white/5 border border-white/10 text-text-muted text-sm font-medium hover:bg-white/10 hover:text-white hover:border-accent/40 transition-all"
+          data-filter="dados">Dados & BI</button>
         <button
-          class="filter-btn bg-transparent border border-white/10 text-text-muted px-4 py-2 rounded-full text-xs hover:border-accent hover:text-white transition"
+          class="filter-btn px-6 py-3 rounded-full bg-white/5 border border-white/10 text-text-muted text-sm font-medium hover:bg-white/10 hover:text-white hover:border-accent/40 transition-all"
           data-filter="automation">Automação</button>
         <button
-          class="filter-btn bg-transparent border border-white/10 text-text-muted px-4 py-2 rounded-full text-xs hover:border-accent hover:text-white transition"
+          class="filter-btn px-6 py-3 rounded-full bg-white/5 border border-white/10 text-text-muted text-sm font-medium hover:bg-white/10 hover:text-white hover:border-accent/40 transition-all"
           data-filter="logistica">Logística</button>
         <button
-          class="filter-btn bg-transparent border border-white/10 text-text-muted px-4 py-2 rounded-full text-xs hover:border-accent hover:text-white transition"
+          class="filter-btn px-6 py-3 rounded-full bg-white/5 border border-white/10 text-text-muted text-sm font-medium hover:bg-white/10 hover:text-white hover:border-accent/40 transition-all"
           data-filter="sistemas">Sistemas</button>
       </div>
 
-      <!-- Grid - TODOS OS 6 PROJETOS -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Project 1 -->
-        <div
-          class="project-card group bg-secondary rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 tilt-card"
+        <article
+          class="group project-card col-span-1 md:col-span-2 lg:col-span-2 bg-white/[0.03] backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-2"
           data-category="dados automation">
-          <div class="h-20 flex items-center justify-center relative overflow-hidden">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-accent to-blue-500 opacity-30 group-hover:opacity-60 transition">
+          <div
+            class="relative h-64 md:h-80 bg-gradient-to-br from-accent/30 via-purple-600/20 to-blue-500/30 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center"><i
+                class="fa-solid fa-chart-column text-8xl text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500"></i>
             </div>
-            <i class="fa-solid fa-chart-column text-white text-2xl relative z-10 group-hover:scale-110 transition"></i>
+            <div class="absolute top-6 left-6"><span
+                class="px-4 py-2 rounded-full bg-accent text-white text-xs font-semibold uppercase tracking-wider shadow-lg shadow-accent/30">Data
+                & BI</span></div>
           </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-wider text-muted">Análise de Dados</span>
-            <h3 class="text-sm font-semibold mt-1 group-hover:text-accent transition">Dashboard Operacional</h3>
-            <p class="text-[11px] text-text-muted mt-2 line-clamp-2">Power BI com automação de KPIs e redução de tempo
-              de análise.</p>
-            <div class="flex justify-between mt-3 text-[11px] text-text-muted border-t border-white/10 pt-3">
-              <span class="flex items-center gap-1"><i
-                  class="fa-solid fa-arrow-trend-down text-accent text-[10px]"></i><strong
-                  class="text-accent">70%</strong> redução</span>
-              <span class="flex items-center gap-1"><i class="fa-regular fa-clock text-accent text-[10px]"></i><strong
-                  class="text-accent">15h</strong>/sem</span>
+          <div class="p-8 md:p-10">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4 group-hover:text-accent transition-colors">Dashboard
+              Operacional Inteligente</h3>
+            <p class="text-text-muted text-base mb-6 leading-relaxed max-w-2xl">Sistema completo de Power BI com
+              automação de KPIs em tempo real, eliminando relatórios manuais e reduzindo drasticamente o tempo de
+              análise operacional.</p>
+            <div class="grid grid-cols-2 gap-6 mb-6 p-6 rounded-2xl bg-white/5 border border-white/10">
+              <div>
+                <div class="text-3xl font-bold text-accent mb-1">70%</div>
+                <div class="text-sm text-text-muted">Redução de Tempo</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-accent mb-1">15h</div>
+                <div class="text-sm text-text-muted">Economia/Semana</div>
+              </div>
             </div>
-            <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Power BI</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">SQL</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Excel</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">ETL</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Power
+                BI</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">SQL</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Excel</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">ETL</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Project 2 -->
-        <div
-          class="project-card group bg-secondary rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 tilt-card"
+        <article
+          class="group project-card bg-white/[0.03] backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-2"
           data-category="sistemas automation">
-          <div class="h-20 flex items-center justify-center relative overflow-hidden">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-30 group-hover:opacity-60 transition">
+          <div class="relative h-48 bg-gradient-to-br from-indigo-500/30 to-purple-600/30 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center"><i
+                class="fa-solid fa-mobile-screen text-6xl text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500"></i>
             </div>
-            <i class="fa-solid fa-mobile-screen text-white text-2xl group-hover:scale-110 transition"></i>
+            <div class="absolute top-4 left-4"><span
+                class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white text-xs font-medium border border-white/20">Sistemas</span>
+            </div>
           </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-wider text-muted">Sistemas</span>
-            <h3 class="text-sm font-semibold mt-1 group-hover:text-accent transition">AppSheet Gestão de Campo</h3>
-            <p class="text-[11px] text-text-muted mt-2 line-clamp-2">Sistema mobile com sincronização em tempo real.</p>
-            <div class="flex justify-between mt-3 text-[11px] text-text-muted border-t border-white/10 pt-3">
-              <span class="flex items-center gap-1"><i class="fa-solid fa-users text-accent text-[10px]"></i><strong
-                  class="text-accent">25+</strong> usuários</span>
-              <span class="flex items-center gap-1"><i
-                  class="fa-solid fa-circle-check text-accent text-[10px]"></i><strong
-                  class="text-accent">99%</strong></span>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">AppSheet Gestão de Campo</h3>
+            <p class="text-text-muted text-sm mb-4 line-clamp-2">Sistema mobile com sincronização em tempo real para
+              equipes externas.</p>
+            <div class="flex items-center justify-between mb-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div>
+                <div class="text-2xl font-bold text-accent">25+</div>
+                <div class="text-xs text-text-muted">Usuários Ativos</div>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-accent">99%</div>
+                <div class="text-xs text-text-muted">Uptime</div>
+              </div>
             </div>
-            <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">AppSheet</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Apps
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">AppSheet</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Apps
                 Script</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Mobile</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Mobile</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Project 3 -->
-        <div
-          class="project-card group bg-secondary rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 tilt-card"
+        <article
+          class="group project-card bg-white/[0.03] backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-2"
           data-category="logistica dados">
-          <div class="h-20 flex items-center justify-center relative overflow-hidden">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-30 group-hover:opacity-60 transition">
+          <div class="relative h-48 bg-gradient-to-br from-cyan-500/30 to-blue-600/30 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center"><i
+                class="fa-solid fa-truck text-6xl text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500"></i>
             </div>
-            <i class="fa-solid fa-truck text-white text-2xl"></i>
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-wider text-muted">Logística</span>
-            <h3 class="text-sm font-semibold mt-1 group-hover:text-accent transition">Otimização Logística</h3>
-            <p class="text-[11px] text-text-muted mt-2 line-clamp-2">Redução de gargalos operacionais.</p>
-            <div class="flex justify-between mt-3 text-[11px] text-text-muted border-t border-white/10 pt-3">
-              <span class="flex items-center gap-1"><i class="fa-solid fa-bolt text-accent text-[10px]"></i><strong
-                  class="text-accent">40%</strong></span>
-              <span class="flex items-center gap-1"><i class="fa-solid fa-box text-accent text-[10px]"></i><strong
-                  class="text-accent">500+</strong>/dia</span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Lean</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">KPIs</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Processos</span>
+            <div class="absolute top-4 left-4"><span
+                class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white text-xs font-medium border border-white/20">Logística</span>
             </div>
           </div>
-        </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">Otimização Logística</h3>
+            <p class="text-text-muted text-sm mb-4 line-clamp-2">Redução de gargalos operacionais através de análise de
+              dados e processos lean.</p>
+            <div class="flex items-center justify-between mb-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div>
+                <div class="text-2xl font-bold text-accent">40%</div>
+                <div class="text-xs text-text-muted">Mais Eficiência</div>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-accent">500+</div>
+                <div class="text-xs text-text-muted">Entregas/Dia</div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Lean</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">KPIs</span>
+              <span
+                class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Processos</span>
+            </div>
+          </div>
+        </article>
 
-        <!-- Project 4 -->
-        <div
-          class="project-card group bg-secondary rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 tilt-card"
+        <!-- Project 4 (Descomentado e corrigido) -->
+        <article
+          class="group project-card bg-white/[0.03] backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-2"
           data-category="automation">
-          <div class="h-20 flex items-center justify-center relative overflow-hidden">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 opacity-30 group-hover:opacity-60 transition">
+          <div class="relative h-48 bg-gradient-to-br from-purple-500/30 to-indigo-500/30 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center"><i
+                class="fa-solid fa-robot text-6xl text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500"></i>
             </div>
-            <i class="fa-solid fa-robot text-white text-2xl"></i>
-          </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-wider text-muted">Automação</span>
-            <h3 class="text-sm font-semibold mt-1 group-hover:text-accent transition">Relatórios Python</h3>
-            <p class="text-[11px] text-text-muted mt-2 line-clamp-2">Relatórios automáticos por email.</p>
-            <div class="flex justify-between mt-3 text-[11px] text-text-muted border-t border-white/10 pt-3">
-              <span class="flex items-center gap-1"><i class="fa-solid fa-rotate text-accent text-[10px]"></i><strong
-                  class="text-accent">100%</strong></span>
-              <span class="flex items-center gap-1"><i class="fa-solid fa-envelope text-accent text-[10px]"></i><strong
-                  class="text-accent">30+</strong></span>
-            </div>
-            <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Python</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Pandas</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Automação</span>
+            <div class="absolute top-4 left-4"><span
+                class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white text-xs font-medium border border-white/20">Automação</span>
             </div>
           </div>
-        </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">Relatórios Python Automatizados
+            </h3>
+            <p class="text-text-muted text-sm mb-4 line-clamp-2">Geração automática de relatórios por email usando
+              Python e Pandas.</p>
+            <div class="flex items-center justify-between mb-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div>
+                <div class="text-2xl font-bold text-accent">100%</div>
+                <div class="text-xs text-text-muted">Automatizado</div>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-accent">30+</div>
+                <div class="text-xs text-text-muted">Emails/Dia</div>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Python</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Pandas</span>
+              <span
+                class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Automação</span>
+            </div>
+          </div>
+        </article>
 
         <!-- Project 5 -->
-        <div
-          class="project-card group bg-secondary rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 tilt-card"
+        <article
+          class="group project-card bg-white/[0.03] backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-2"
           data-category="sistemas">
-          <div class="h-20 flex items-center justify-center relative overflow-hidden">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-30 group-hover:opacity-60 transition">
+          <div class="relative h-48 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center"><i
+                class="fa-solid fa-desktop text-6xl text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500"></i>
             </div>
-            <i class="fa-solid fa-desktop text-white text-2xl"></i>
+            <div class="absolute top-4 left-4"><span
+                class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white text-xs font-medium border border-white/20">Sistemas</span>
+            </div>
           </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-wider text-muted">Sistemas</span>
-            <h3 class="text-sm font-semibold mt-1 group-hover:text-accent transition">Monitoramento</h3>
-            <p class="text-[11px] text-text-muted mt-2 line-clamp-2">Estruturação de operação.</p>
-            <div class="flex justify-between mt-3 text-[11px] text-text-muted border-t border-white/10 pt-3">
-              <span><strong class="text-accent">8</strong> estações</span>
-              <span><strong class="text-accent">12</strong> treinados</span>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">Monitoramento de Operação</h3>
+            <p class="text-text-muted text-sm mb-4 line-clamp-2">Estruturação completa de operação com treinamento de
+              equipe.</p>
+            <div class="flex items-center justify-between mb-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div>
+                <div class="text-2xl font-bold text-accent">8</div>
+                <div class="text-xs text-text-muted">Estações</div>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-accent">12</div>
+                <div class="text-xs text-text-muted">Treinados</div>
+              </div>
             </div>
-            <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Gestão</span>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Gestão</span>
               <span
-                class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Treinamento</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Infra</span>
+                class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Treinamento</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Infra</span>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- Project 6 -->
-        <div
-          class="project-card group bg-secondary rounded-xl overflow-hidden border border-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent/60 tilt-card"
+        <article
+          class="group project-card bg-white/[0.03] backdrop-blur-xl rounded-3xl overflow-hidden border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-2"
           data-category="dados">
-          <div class="h-20 flex items-center justify-center relative overflow-hidden">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-indigo-900 to-purple-600 opacity-30 group-hover:opacity-60 transition">
+          <div class="relative h-48 bg-gradient-to-br from-indigo-900/30 to-purple-600/30 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center"><i
+                class="fa-solid fa-shield-halved text-6xl text-white/20 group-hover:text-white/40 group-hover:scale-110 transition-all duration-500"></i>
             </div>
-            <i class="fa-solid fa-shield-halved text-white text-2xl"></i>
+            <div class="absolute top-4 left-4"><span
+                class="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white text-xs font-medium border border-white/20">Dados</span>
+            </div>
           </div>
-          <div class="p-4">
-            <span class="text-[10px] uppercase tracking-wider text-muted">Dados</span>
-            <h3 class="text-sm font-semibold mt-1 group-hover:text-accent transition">Governança de Dados</h3>
-            <p class="text-[11px] text-text-muted mt-2 line-clamp-2">Redução de erros e padronização.</p>
-            <div class="flex justify-between mt-3 text-[11px] text-text-muted border-t border-white/10 pt-3">
-              <span><strong class="text-accent">85%</strong> erros</span>
-              <span><strong class="text-accent">10k+</strong> registros</span>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3 group-hover:text-accent transition-colors">Governança de Dados</h3>
+            <p class="text-text-muted text-sm mb-4 line-clamp-2">Implementação de processos de validação e padronização
+              de dados.</p>
+            <div class="flex items-center justify-between mb-4 p-4 rounded-xl bg-white/5 border border-white/10">
+              <div>
+                <div class="text-2xl font-bold text-accent">85%</div>
+                <div class="text-xs text-text-muted">Menos Erros</div>
+              </div>
+              <div class="text-right">
+                <div class="text-2xl font-bold text-accent">10k+</div>
+                <div class="text-xs text-text-muted">Registros</div>
+              </div>
             </div>
-            <div class="flex flex-wrap gap-1.5 mt-3">
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Data
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Data
                 Quality</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">Validação</span>
-              <span class="skill-tag text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10">ETL</span>
+              <span
+                class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Validação</span>
+              <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">ETL</span>
             </div>
           </div>
-        </div>
+        </article>
 
       </div>
 
-      <!-- CTA -->
-      <div class="text-center mt-10">
+      <div class="mt-20 text-center fade-in-section">
         <a href="#contato"
-          class="inline-flex items-center gap-2 bg-accent/20 text-text-muted px-5 py-3 rounded-lg text-sm border border-dashed border-accent hover:bg-accent hover:text-white transition magnetic-btn">
-          <i class="fa-solid fa-circle-plus w-4 h-4"></i>
+          class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-accent text-white font-semibold text-lg hover:bg-accent-light hover:scale-105 transition-all duration-300 shadow-2xl shadow-accent/30 group">
+          <i class="fa-solid fa-circle-plus group-hover:rotate-90 transition-transform duration-500"></i>
           Tem um projeto? Vamos conversar
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section - TODAS AS 3 EXPERIÊNCIAS -->
-  <section id="experiencia" class="py-20 px-6 bg-secondary relative z-10">
-    <div class="max-w-4xl mx-auto">
-
-      <!-- Header -->
-      <div class="text-center mb-12 fade-in-section">
-        <h2 class="text-3xl md:text-4xl font-bold font-display mb-3">Experiência Profissional</h2>
-        <div class="w-14 h-1 bg-accent mx-auto rounded-full"></div>
-        <p class="text-text-muted mt-3 text-sm">Dados, automação e sistemas aplicados a operações reais</p>
+  <!-- Experience Section -->
+  <section id="experiencia" class="py-32 px-6 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Experiência <span>Profissional</span></h2>
+        <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
       </div>
 
-      <!-- Timeline -->
-      <div class="relative">
-        <div
-          class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent to-transparent md:-translate-x-1/2">
-        </div>
-
+      <div class="space-y-8">
         <!-- Job 1 -->
-        <div class="relative flex items-center justify-end md:justify-end mb-8 fade-in-section">
-          <div class="hidden md:block w-1/2"></div>
+        <div
+          class="group relative pl-8 md:pl-12 border-l-2 border-white/10 hover:border-accent transition-colors duration-300">
           <div
-            class="absolute left-4 md:left-1/2 w-3.5 h-3.5 bg-accent rounded-full border-4 border-primary md:-translate-x-1/2">
+            class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-2 border-accent group-hover:scale-125 transition-transform">
           </div>
           <div
-            class="ml-10 md:mr-10 md:w-[calc(50%-2.5rem)] bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-            <div class="flex items-center gap-2 text-accent text-xs mb-2"><i class="fa-regular fa-calendar"></i>Mar 2021
-              – Atual</div>
-            <h3 class="text-sm font-semibold">Analista Sênior de Sistemas & Dados</h3>
-            <p class="text-text-muted text-xs mb-2">G3 Telecom</p>
-            <p class="text-[11px] text-text-muted leading-relaxed">Dashboards, automações e ecossistema AppSheet para
-              decisões gerenciais.</p>
-            <ul class="mt-2 text-[11px] text-text-muted space-y-1">
-              <li><span class="text-accent mt-1">▸</span> Power BI + Looker Studio</li>
-              <li><span class="text-accent mt-1">▸</span> Apps empresariais (AppSheet)</li>
-              <li><span class="text-accent mt-1">▸</span> Automação de processos</li>
-            </ul>
+            class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10 hover:border-accent/30 hover:bg-white/10 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Analista Sênior de Sistemas & Dados</h3>
+                <p class="text-accent font-medium">G3 Telecom</p>
+              </div>
+              <span class="text-sm text-text-muted whitespace-nowrap">Mar 2021 – Atual</span>
+            </div>
+            <p class="text-text-muted/80 mb-4 leading-relaxed">Dashboards, automações e ecossistema AppSheet para
+              processos ágeis, controle logístico.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">Power BI</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">AppSheet</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">Automação</span>
+            </div>
           </div>
         </div>
 
         <!-- Job 2 -->
-        <div class="relative flex items-center justify-start md:justify-start mb-8 fade-in-section">
+        <div
+          class="group relative pl-8 md:pl-12 border-l-2 border-white/10 hover:border-accent transition-colors duration-300">
           <div
-            class="ml-10 md:ml-10 md:w-[calc(50%-2.5rem)] bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-            <div class="flex items-center gap-2 text-accent text-xs mb-2"><i class="fa-regular fa-calendar"></i>2014 –
-              2016</div>
-            <h3 class="text-sm font-semibold">Analista de Processos & Operações</h3>
-            <p class="text-text-muted text-xs mb-2">Almaviva do Brasil</p>
-            <p class="text-[11px] text-text-muted">Gestão operacional e implantação de sistemas com ganho de eficiência.
-            </p>
-            <ul class="mt-2 text-[11px] text-text-muted space-y-1">
-              <li><span class="text-accent mt-1">▸</span> +25% eficiência operacional</li>
-              <li><span class="text-accent mt-1">▸</span> Treinamento de equipes</li>
-              <li><span class="text-accent mt-1">▸</span> Gestão de performance</li>
-            </ul>
+            class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-2 border-accent group-hover:scale-125 transition-transform">
           </div>
           <div
-            class="absolute left-4 md:left-1/2 w-3.5 h-3.5 bg-accent rounded-full border-4 border-primary md:-translate-x-1/2">
+            class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10 hover:border-accent/30 hover:bg-white/10 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Analista de Processos & Operações</h3>
+                <p class="text-accent font-medium">Almaviva do Brasil</p>
+              </div>
+              <span class="text-sm text-text-muted whitespace-nowrap">2014 – 2016</span>
+            </div>
+            <p class="text-text-muted/80 mb-4 leading-relaxed">Controle operacional, +25% eficiência operacional e
+              implantação de metodologias com ganho de eficiência.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">Processos</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">Treinamento</span>
+            </div>
           </div>
-          <div class="hidden md:block w-1/2"></div>
         </div>
 
         <!-- Job 3 -->
-        <div class="relative flex items-center justify-end md:justify-end mb-8 fade-in-section">
-          <div class="hidden md:block w-1/2"></div>
+        <div
+          class="group relative pl-8 md:pl-12 border-l-2 border-white/10 hover:border-accent transition-colors duration-300">
           <div
-            class="absolute left-4 md:left-1/2 w-3.5 h-3.5 bg-accent rounded-full border-4 border-primary md:-translate-x-1/2">
+            class="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-2 border-accent group-hover:scale-125 transition-transform">
           </div>
           <div
-            class="ml-10 md:mr-10 md:w-[calc(50%-2.5rem)] bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-            <div class="flex items-center gap-2 text-accent text-xs mb-2"><i class="fa-regular fa-calendar"></i>2011 –
-              2013</div>
-            <h3 class="text-sm font-semibold">Analista Financeiro & Arquivamento</h3>
-            <p class="text-text-muted text-xs mb-2">Banco do Nordeste</p>
-            <p class="text-[11px] text-text-muted">Compliance bancário e digitalização documental.</p>
-            <ul class="mt-2 text-[11px] text-text-muted space-y-1">
-              <li><span class="text-accent mt-1">▸</span> 100% aderência compliance</li>
-              <li><span class="text-accent mt-1">▸</span> Digitalização de processos</li>
-              <li><span class="text-accent mt-1">▸</span> Treinamento de equipe</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section - TODAS AS SKILLS -->
-  <section id="habilidades" class="py-20 px-6 relative z-10">
-    <div class="max-w-6xl mx-auto">
-
-      <!-- Header -->
-      <div class="text-center mb-10 fade-in-section">
-        <h2 class="text-3xl md:text-4xl font-bold font-display mb-3">Habilidades & Tecnologias</h2>
-        <div class="w-14 h-1 bg-accent mx-auto rounded-full"></div>
-        <p class="text-text-muted mt-3 text-sm">Stack focado em dados, automação e sistemas empresariais</p>
-      </div>
-
-      <!-- Grid - TODAS AS 6 CATEGORIAS -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-        <!-- Skill 1: Análise de Dados -->
-        <div
-          class="group bg-primary/80 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-accent/60 hover:-translate-y-1 transition tilt-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent"><i
-                class="fa-solid fa-chart-line"></i></div>
-            <h3 class="text-sm font-semibold">Análise de Dados</h3>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[11px]">
-            <span class="skill-tag">Power BI</span>
-            <span class="skill-tag">Excel</span>
-            <span class="skill-tag">Looker Studio</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">Storytelling</span>
-            <span class="skill-tag">KPIs</span>
-          </div>
-        </div>
-
-        <!-- Skill 2: Desenvolvimento -->
-        <div
-          class="group bg-primary/80 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-accent/60 hover:-translate-y-1 transition tilt-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent"><i
-                class="fa-solid fa-code"></i></div>
-            <h3 class="text-sm font-semibold">Desenvolvimento</h3>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[11px]">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Html e CSS</span>
-            <span class="skill-tag">AppSheet</span>
-            <span class="skill-tag">Apps Script</span>
-            <span class="skill-tag">POO</span>
-          </div>
-        </div>
-
-        <!-- Skill 3: Formação -->
-        <div
-          class="group bg-primary/80 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-accent/60 hover:-translate-y-1 transition tilt-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent"><i
-                class="fa-solid fa-graduation-cap"></i></div>
-            <h3 class="text-sm font-semibold">Formação</h3>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[11px]">
-            <span class="skill-tag">ADS</span>
-            <span class="skill-tag">UNIFATECIE</span>
-            <span class="skill-tag">Cursando</span>
-          </div>
-        </div>
-
-        <!-- Skill 4: Infraestrutura -->
-        <div
-          class="group bg-primary/80 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-accent/60 hover:-translate-y-1 transition tilt-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent"><i
-                class="fa-solid fa-server"></i></div>
-            <h3 class="text-sm font-semibold">Infraestrutura</h3>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[11px]">
-            <span class="skill-tag">Hardware</span>
-            <span class="skill-tag">Redes</span>
-            <span class="skill-tag">Suporte Técnico</span>
-            <span class="skill-tag">Manutenção</span>
-          </div>
-        </div>
-
-        <!-- Skill 5: Soft Skills -->
-        <div
-          class="group bg-primary/80 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-accent/60 hover:-translate-y-1 transition tilt-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent"><i
-                class="fa-solid fa-users"></i></div>
-            <h3 class="text-sm font-semibold">Soft Skills</h3>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[11px]">
-            <span class="skill-tag">Comunicação Executiva</span>
-            <span class="skill-tag">Liderança de Equipe</span>
-            <span class="skill-tag">Pensamento analítico</span>
-            <span class="skill-tag">Melhoria Continua</span>
-          </div>
-        </div>
-
-        <!-- Skill 6: Idiomas -->
-        <div
-          class="group bg-primary/80 backdrop-blur-md p-5 rounded-xl border border-white/10 hover:border-accent/60 hover:-translate-y-1 transition tilt-card">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center text-accent"><i
-                class="fa-solid fa-language"></i></div>
-            <h3 class="text-sm font-semibold">Idiomas</h3>
-          </div>
-          <div class="flex flex-wrap gap-2 text-[11px]">
-            <span class="skill-tag">Português Nativo</span>
-            <span class="skill-tag">Inglês Técnico</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section - TODOS OS 6 DEPOIMENTOS -->
-  <section id="depoimentos" class="py-20 px-6 bg-secondary relative z-10">
-    <div class="max-w-6xl mx-auto">
-
-      <!-- Header -->
-      <div class="text-center mb-10 fade-in-section">
-        <h2 class="text-3xl md:text-4xl font-bold font-display mb-3">Recomendações</h2>
-        <div class="w-14 h-1 bg-accent mx-auto rounded-full"></div>
-        <p class="text-text-muted mt-3 text-sm">Feedback de gestores e colegas de projetos</p>
-      </div>
-
-      <!-- Horizontal Scroll - TODOS OS 6 DEPOIMENTOS -->
-      <div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-
-        <!-- Testimonial 1 -->
-        <div
-          class="min-w-[280px] snap-start bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-          <div class="flex items-center gap-2 mb-3">
-            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary text-xs font-bold">
-              GO</div>
-            <div>
-              <h4 class="text-sm font-semibold">Gestor de Operações</h4>
-              <p class="text-[11px] text-text-muted">G3 Telecom</p>
+            class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10 hover:border-accent/30 hover:bg-white/10 transition-all duration-300">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+              <div>
+                <h3 class="text-xl font-semibold mb-1">Analista Financeiro & Arquivamento</h3>
+                <p class="text-accent font-medium">Banco do Nordeste</p>
+              </div>
+              <span class="text-sm text-text-muted whitespace-nowrap">2011 – 2013</span>
+            </div>
+            <p class="text-text-muted/80 mb-4 leading-relaxed">Compliance bancário, digitalização documental e
+              treinamentos de colaboradores estágiarios.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">Compliance</span>
+              <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">Digitalização</span>
             </div>
           </div>
-          <div class="flex text-accent text-xs mb-2">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="habilidades" class="py-32 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent pointer-events-none">
+    </div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-20 fade-in-section">
+        <span
+          class="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs uppercase tracking-widest font-semibold mb-4">Expertise</span>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Stack Tecnológico</h2>
+        <p class="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">Ferramentas e tecnologias que domino para
+          entregar soluções de alto impacto</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <!-- Data & BI -->
+        <div
+          class="group skill-category bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-1">
+          <div class="flex items-center gap-4 mb-8">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-chart-line text-2xl text-white"></i></div>
+            <div>
+              <h3 class="text-2xl font-bold mb-1">Data & BI</h3>
+              <p class="text-text-muted text-sm">Análise e visualização de dados</p>
+            </div>
           </div>
-          <p class="text-[11px] text-text-muted leading-relaxed">Transformação completa em dashboards e visibilidade
-            operacional em tempo real.</p>
+          <div class="space-y-4">
+            <div
+              class="skill-item flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+              <div class="flex items-center gap-3"><i class="fa-solid fa-chart-simple text-accent"></i><span
+                  class="font-medium">Power BI</span></div><span
+                class="text-xs text-text-muted px-3 py-1 rounded-full bg-accent/20 text-accent">Avançado</span>
+            </div>
+            <div
+              class="skill-item flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+              <div class="flex items-center gap-3"><i class="fa-solid fa-database text-accent"></i><span
+                  class="font-medium">SQL</span></div><span
+                class="text-xs text-text-muted px-3 py-1 rounded-full bg-accent/20 text-accent">Intermediário</span>
+            </div>
+            <div
+              class="skill-item flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+              <div class="flex items-center gap-3"><i class="fa-solid fa-table text-accent"></i><span
+                  class="font-medium">Excel Avançado</span></div><span
+                class="text-xs text-text-muted px-3 py-1 rounded-full bg-accent/20 text-accent">Avançado</span>
+            </div>
+            <div
+              class="skill-item flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+              <div class="flex items-center gap-3"><i class="fa-solid fa-chart-pie text-accent"></i><span
+                  class="font-medium">Looker Studio</span></div><span
+                class="text-xs text-text-muted px-3 py-1 rounded-full bg-white/20 text-text-muted">Básico</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Development -->
+        <div
+          class="group skill-category bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-1">
+          <div class="flex items-center gap-4 mb-8">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-code text-2xl text-white"></i></div>
+            <div>
+              <h3 class="text-2xl font-bold mb-1">Desenvolvimento</h3>
+              <p class="text-text-muted text-sm">Web e automação</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div
+              class="skill-item flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+              <div class="flex items-center gap-3"><i class="fa-brands fa-python text-accent"></i><span
+                  class="font-medium">Python</span></div><span
+                class="text-xs text-text-muted px-3 py-1 rounded-full bg-accent/20 text-accent">Intermediário</span>
+            </div>
+            <div
+              class="skill-item flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+              <div class="flex items-center gap-3"><i class="fa-brands fa-js text-accent"></i><span
+                  class="font-medium">JavaScript</span></div><span
+                class="text-xs text-text-muted px-3 py-1 rounded-full bg-white/20 text-text-muted">Básico</span>
+            </div>
+            <div
+              class="skill-item flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+              <div class="flex items-center gap-3"><i class="fa-brands fa-html5 text-accent"></i><span
+                  class="font-medium">HTML & CSS</span></div><span
+                class="text-xs text-text-muted px-3 py-1 rounded-full bg-accent/20 text-accent">Intermediário</span>
+            </div>
+            <div
+              class="skill-item flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300">
+              <div class="flex items-center gap-3"><i class="fa-solid fa-mobile-screen text-accent"></i><span
+                  class="font-medium">AppSheet</span></div><span
+                class="text-xs text-text-muted px-3 py-1 rounded-full bg-accent/20 text-accent">Avançado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infrastructure -->
+        <div
+          class="group skill-category bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-1">
+          <div class="flex items-center gap-4 mb-8">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-green-500/20 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-server text-2xl text-white"></i></div>
+            <div>
+              <h3 class="text-2xl font-bold mb-1">Infraestrutura</h3>
+              <p class="text-text-muted text-sm">Hardware e redes</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div
+              class="skill-chip p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300 text-center">
+              <i class="fa-solid fa-microchip text-accent text-xl mb-2 block"></i><span
+                class="text-sm font-medium">Hardware</span></div>
+            <div
+              class="skill-chip p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300 text-center">
+              <i class="fa-solid fa-network-wired text-accent text-xl mb-2 block"></i><span
+                class="text-sm font-medium">Redes</span></div>
+            <div
+              class="skill-chip p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300 text-center">
+              <i class="fa-solid fa-screwdriver-wrench text-accent text-xl mb-2 block"></i><span
+                class="text-sm font-medium">Suporte</span></div>
+            <div
+              class="skill-chip p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300 text-center">
+              <i class="fa-solid fa-shield-halved text-accent text-xl mb-2 block"></i><span
+                class="text-sm font-medium">Segurança</span></div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div
+          class="group skill-category bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 transition-all duration-500 hover:-translate-y-1">
+          <div class="flex items-center gap-4 mb-8">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-users text-2xl text-white"></i></div>
+            <div>
+              <h3 class="text-2xl font-bold mb-1">Soft Skills</h3>
+              <p class="text-text-muted text-sm">Competências comportamentais</p>
+            </div>
+          </div>
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"><i
+                class="fa-solid fa-check-circle text-accent"></i><span class="text-sm">Comunicação Executiva</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"><i
+                class="fa-solid fa-check-circle text-accent"></i><span class="text-sm">Liderança de Equipe</span></div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"><i
+                class="fa-solid fa-check-circle text-accent"></i><span class="text-sm">Pensamento Analítico</span></div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"><i
+                class="fa-solid fa-check-circle text-accent"></i><span class="text-sm">Melhoria Contínua</span></div>
+          </div>
+          <div class="pt-6 border-t border-white/10">
+            <h4 class="text-sm font-semibold text-text-muted uppercase tracking-wider mb-4">Idiomas</h4>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between"><span class="text-sm">Português</span>
+                <div class="flex gap-1">
+                  <div class="w-8 h-2 rounded-full bg-accent"></div>
+                  <div class="w-8 h-2 rounded-full bg-accent"></div>
+                  <div class="w-8 h-2 rounded-full bg-accent"></div>
+                  <div class="w-8 h-2 rounded-full bg-accent"></div>
+                  <div class="w-8 h-2 rounded-full bg-accent"></div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between"><span class="text-sm">Inglês Técnico</span>
+                <div class="flex gap-1">
+                  <div class="w-8 h-2 rounded-full bg-accent"></div>
+                  <div class="w-8 h-2 rounded-full bg-accent"></div>
+                  <div class="w-8 h-2 rounded-full bg-accent"></div>
+                  <div class="w-8 h-2 rounded-full bg-white/20"></div>
+                  <div class="w-8 h-2 rounded-full bg-white/20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certificacoes" class="py-32 px-6 relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none">
+    </div>
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-20 fade-in-section">
+        <span
+          class="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs uppercase tracking-widest font-semibold mb-4">Formação</span>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Certificações & Educação</h2>
+        <p class="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">Aprendizado contínuo em tecnologia, dados e
+          engenharia de sistemas</p>
+      </div>
+
+      <div class="mb-20 fade-in-section">
+        <div
+          class="relative bg-gradient-to-br from-accent/10 via-purple-600/5 to-blue-500/10 rounded-3xl p-8 md:p-12 border border-accent/20 overflow-hidden group hover:border-accent/40 transition-all duration-500">
+          <div
+            class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -mr-48 -mt-48 group-hover:bg-accent/20 transition-all duration-700">
+          </div>
+          <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-8">
+            <div
+              class="w-24 h-24 rounded-2xl bg-gradient-to-br from-accent to-purple-600 flex items-center justify-center shadow-2xl shadow-accent/30 group-hover:scale-110 transition-transform duration-500 shrink-0">
+              <i class="fa-solid fa-graduation-cap text-4xl text-white"></i></div>
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-3"><span
+                  class="px-3 py-1.5 rounded-full bg-accent/20 text-accent text-xs font-semibold uppercase tracking-wider">Graduação</span><span
+                  class="text-sm text-text-muted">Em andamento</span></div>
+              <h3 class="text-2xl md:text-3xl font-bold mb-2">Análise e Desenvolvimento de Sistemas</h3>
+              <p class="text-text-muted text-base mb-4">UNIFATECIE • Cursando</p>
+              <div class="flex items-center gap-6 text-sm text-text-muted">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-calendar text-accent"></i><span>Início:
+                    2025</span></div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-accent"></i><span>Duração: 2 anos
+                    e 6 meses</span></div>
+              </div>
+            </div>
+            <div class="hidden md:block shrink-0">
+              <div class="px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-center">
+                <div class="text-2xl font-bold text-accent mb-1">Cursando</div>
+                <div class="text-xs text-text-muted">Previsão: 2028</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-12">
+        <!-- Banco de Dados -->
+        <div class="fade-in-section">
+          <div class="flex items-center gap-4 mb-8">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
+              <i class="fa-solid fa-database text-xl text-white"></i></div>
+            <div>
+              <h3 class="text-2xl font-bold">Banco de Dados</h3>
+              <p class="text-text-muted text-sm">Fundação Bradesco • 2026</p>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div
+              class="group cert-card bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-start justify-between mb-4"><i
+                  class="fa-solid fa-server text-2xl text-accent group-hover:scale-110 transition-transform"></i><span
+                  class="text-xs text-text-muted px-3 py-1.5 rounded-full bg-white/5 border border-white/10">15h</span>
+              </div>
+              <h4 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors">Implementação de Banco
+                de Dados</h4>
+              <p class="text-text-muted text-xs">Fundamentos de implementação e gestão de BDs relacionais.</p>
+            </div>
+            <div
+              class="group cert-card bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-start justify-between mb-4"><i
+                  class="fa-solid fa-database text-2xl text-accent group-hover:scale-110 transition-transform"></i><span
+                  class="text-xs text-text-muted px-3 py-1.5 rounded-full bg-white/5 border border-white/10">15h</span>
+              </div>
+              <h4 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors">Administração de Banco
+                de Dados</h4>
+              <p class="text-text-muted text-xs">Gestão, backup e otimização de bancos de dados.</p>
+            </div>
+            <div
+              class="group cert-card bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-start justify-between mb-4"><i
+                  class="fa-solid fa-diagram-project text-2xl text-accent group-hover:scale-110 transition-transform"></i><span
+                  class="text-xs text-text-muted px-3 py-1.5 rounded-full bg-white/5 border border-white/10">8h</span>
+              </div>
+              <h4 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors">Modelagem de Dados</h4>
+              <p class="text-text-muted text-xs">Técnicas de modelagem conceitual, lógica e física.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="fade-in-section">
+          <div class="flex items-center gap-4 mb-8">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center shadow-lg shadow-yellow-500/20">
+              <i class="fa-brands fa-python text-xl text-white"></i></div>
+            <div>
+              <h3 class="text-2xl font-bold">Python</h3>
+              <p class="text-text-muted text-sm">Fundação Bradesco • 2024</p>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div
+              class="group cert-card bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-start justify-between mb-4"><i
+                  class="fa-brands fa-python text-2xl text-accent group-hover:scale-110 transition-transform"></i><span
+                  class="text-xs text-text-muted px-3 py-1.5 rounded-full bg-white/5 border border-white/10">18h</span>
+              </div>
+              <h4 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors">Linguagem Python</h4>
+              <p class="text-text-muted text-xs">Fundamentos da linguagem, sintaxe e estruturas básicas.</p>
+            </div>
+            <div
+              class="group cert-card bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-start justify-between mb-4"><i
+                  class="fa-solid fa-code-branch text-2xl text-accent group-hover:scale-110 transition-transform"></i><span
+                  class="text-xs text-text-muted px-3 py-1.5 rounded-full bg-white/5 border border-white/10">10h</span>
+              </div>
+              <h4 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors">Python OOP</h4>
+              <p class="text-text-muted text-xs">Programação orientada a objetos com Python.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fundamentos -->
+        <div class="fade-in-section">
+          <div class="flex items-center gap-4 mb-8">
+            <div
+              class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-green-500/20">
+              <i class="fa-solid fa-brain text-xl text-white"></i></div>
+            <div>
+              <h3 class="text-2xl font-bold">Fundamentos</h3>
+              <p class="text-text-muted text-sm">SENAC & DATA-ONLINE • 2012-2013</p>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div
+              class="group cert-card bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-start justify-between mb-4"><i
+                  class="fa-solid fa-brain text-2xl text-accent group-hover:scale-110 transition-transform"></i><span
+                  class="text-xs text-text-muted px-3 py-1.5 rounded-full bg-white/5 border border-white/10">30h</span>
+              </div>
+              <h4 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors">Lógica de Programação
+              </h4>
+              <p class="text-text-muted text-xs">Algoritmos, fluxogramas e raciocínio lógico.</p>
+            </div>
+            <div
+              class="group cert-card bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+              <div class="flex items-start justify-between mb-4"><i
+                  class="fa-solid fa-microchip text-2xl text-accent group-hover:scale-110 transition-transform"></i><span
+                  class="text-xs text-text-muted px-3 py-1.5 rounded-full bg-white/5 border border-white/10">102h</span>
+              </div>
+              <h4 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors">Hardware de
+                Computadores</h4>
+              <p class="text-text-muted text-xs">Arquitetura, componentes e manutenção de hardware.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 text-center fade-in-section">
+        <div class="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-white/5 border border-white/10"><i
+            class="fa-solid fa-circle-check text-accent text-xl"></i>
+          <div class="text-left">
+            <div class="font-semibold text-sm">Aprendizado Contínuo</div>
+            <div class="text-xs text-text-muted">Sempre evoluindo em tecnologia e dados</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="depoimentos" class="py-32 px-6 relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none">
+    </div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-20 fade-in-section">
+        <span
+          class="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs uppercase tracking-widest font-semibold mb-4">Depoimentos</span>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">O Que Dizem Sobre Meu Trabalho</h2>
+        <p class="text-text-muted text-lg max-w-2xl mx-auto leading-relaxed">Feedback real de gestores, colegas e
+          clientes que trabalharam comigo em projetos corporativos</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="lg:col-span-2 fade-in-section">
+          <div
+            class="group testimonial-card bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/10 hover:border-accent/40 transition-all duration-500 relative overflow-hidden h-full">
+            <i
+              class="fa-solid fa-quote-left absolute top-6 left-6 text-6xl text-accent/10 group-hover:text-accent/20 transition-colors duration-500"></i>
+            <div class="relative z-10 pt-12">
+              <div class="flex gap-1 mb-6"><i class="fa-solid fa-star text-accent text-lg"></i><i
+                  class="fa-solid fa-star text-accent text-lg"></i><i
+                  class="fa-solid fa-star text-accent text-lg"></i><i
+                  class="fa-solid fa-star text-accent text-lg"></i><i class="fa-solid fa-star text-accent text-lg"></i>
+              </div>
+              <blockquote class="text-xl md:text-2xl font-medium leading-relaxed mb-8 text-white/90">"Transformação
+                completa em dashboards e visibilidade operacional em tempo real. O trabalho do David mudou completamente
+                nossa forma de tomar decisões gerenciais."</blockquote>
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-purple-600 flex items-center justify-center shadow-lg shadow-accent/30">
+                  <span class="text-white font-bold text-lg">GO</span></div>
+                <div>
+                  <div class="font-semibold text-base">Gestor de Operações</div>
+                  <div class="text-text-muted text-sm">G3 Telecom</div>
+                </div>
+                <div class="ml-auto hidden md:block"><i class="fa-solid fa-circle-check text-accent text-2xl"
+                    title="Depoimento Verificado"></i></div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Testimonial 2 -->
-        <div
-          class="min-w-[280px] snap-start bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-          <div class="flex items-center gap-2 mb-3">
-            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary text-xs font-bold">
-              CL</div>
-            <div>
-              <h4 class="text-sm font-semibold">Coordenador de Logística</h4>
-              <p class="text-[11px] text-text-muted">G3 Telecom</p>
+        <div class="fade-in-section">
+          <div
+            class="group testimonial-card bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex gap-1"><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-solid fa-star text-accent"></i></div><i
+                class="fa-solid fa-circle-check text-accent/50" title="Verificado"></i>
+            </div>
+            <blockquote class="text-base leading-relaxed mb-6 text-white/80 flex-1">"Automação com AppSheet reduziu
+              coleta de dados de dias para minutos. Impacto imediato na produtividade da equipe."</blockquote>
+            <div class="flex items-center gap-3 pt-6 border-t border-white/10">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                <span class="text-white font-bold text-sm">CL</span></div>
+              <div>
+                <div class="font-semibold text-sm">Coordenador de Logística</div>
+                <div class="text-text-muted text-xs">G3 Telecom</div>
+              </div>
             </div>
           </div>
-          <div class="flex text-accent text-xs mb-2">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-          </div>
-          <p class="text-[11px] text-text-muted leading-relaxed">Automação com AppSheet reduziu coleta de dados de dias
-            para minutos.</p>
         </div>
 
         <!-- Testimonial 3 -->
-        <div
-          class="min-w-[280px] snap-start bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-          <div class="flex items-center gap-2 mb-3">
-            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary text-xs font-bold">
-              SL</div>
-            <div>
-              <h4 class="text-sm font-semibold">Supervisora de Loja</h4>
-              <p class="text-[11px] text-text-muted">Comercial Externo</p>
+        <div class="fade-in-section">
+          <div
+            class="group testimonial-card bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex gap-1"><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-solid fa-star text-accent"></i></div><i
+                class="fa-solid fa-circle-check text-accent/50" title="Verificado"></i>
+            </div>
+            <blockquote class="text-base leading-relaxed mb-6 text-white/80 flex-1">"Evolução de cultura data-driven e
+              melhoria na tomada de decisão. Profissional excepcional."</blockquote>
+            <div class="flex items-center gap-3 pt-6 border-t border-white/10">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
+                <span class="text-white font-bold text-sm">SL</span></div>
+              <div>
+                <div class="font-semibold text-sm">Supervisora de Loja</div>
+                <div class="text-text-muted text-xs">Comercial Externo</div>
+              </div>
             </div>
           </div>
-          <div class="flex text-accent text-xs mb-2">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="text-[11px] text-text-muted leading-relaxed">Evolução de cultura data-driven e melhoria na tomada de
-            decisão.</p>
         </div>
 
         <!-- Testimonial 4 -->
-        <div
-          class="min-w-[280px] snap-start bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-          <div class="flex items-center gap-2 mb-3">
-            <div
-              class="w-8 h-8 bg-gradient-to-br from-accent to-purple-600 rounded-full flex items-center justify-center text-primary text-xs font-bold">
-              GB</div>
-            <div>
-              <h4 class="text-sm font-semibold">Gerente de Banco</h4>
-              <p class="text-[11px] text-text-muted">Projeto Interno</p>
+        <div class="fade-in-section">
+          <div
+            class="group testimonial-card bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex gap-1"><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-regular fa-star text-accent/30"></i></div><i
+                class="fa-solid fa-circle-check text-accent/50" title="Verificado"></i>
+            </div>
+            <blockquote class="text-base leading-relaxed mb-6 text-white/80 flex-1">"Entrega consistente de automações
+              críticas com alta confiabilidade. Parceiro estratégico."</blockquote>
+            <div class="flex items-center gap-3 pt-6 border-t border-white/10">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center">
+                <span class="text-white font-bold text-sm">GB</span></div>
+              <div>
+                <div class="font-semibold text-sm">Gerente de Banco</div>
+                <div class="text-text-muted text-xs">Projeto Interno</div>
+              </div>
             </div>
           </div>
-          <div class="flex text-accent text-xs mb-2">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
-          </div>
-          <p class="text-[11px] text-text-muted leading-relaxed">Entrega consistente de automações críticas com alta
-            confiabilidade.</p>
         </div>
 
         <!-- Testimonial 5 -->
-        <div
-          class="min-w-[280px] snap-start bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-          <div class="flex items-center gap-2 mb-3">
-            <div
-              class="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-primary text-xs font-bold">
-              AD</div>
-            <div>
-              <h4 class="text-sm font-semibold">Analista de Dados</h4>
-              <p class="text-[11px] text-text-muted">Equipe de Operações</p>
+        <div class="fade-in-section">
+          <div
+            class="group testimonial-card bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex gap-1"><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-solid fa-star text-accent"></i></div><i
+                class="fa-solid fa-circle-check text-accent/50" title="Verificado"></i>
+            </div>
+            <blockquote class="text-base leading-relaxed mb-6 text-white/80 flex-1">"Forte capacidade analítica e
+              comunicação clara com áreas de negócio. Diferencial competitivo."</blockquote>
+            <div class="flex items-center gap-3 pt-6 border-t border-white/10">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                <span class="text-white font-bold text-sm">AD</span></div>
+              <div>
+                <div class="font-semibold text-sm">Analista de Dados</div>
+                <div class="text-text-muted text-xs">Equipe de Operações</div>
+              </div>
             </div>
           </div>
-          <div class="flex text-accent text-xs mb-2">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="text-[11px] text-text-muted leading-relaxed">Forte capacidade analítica e comunicação clara com
-            áreas de negócio.</p>
         </div>
 
         <!-- Testimonial 6 -->
-        <div
-          class="min-w-[280px] snap-start bg-primary/80 backdrop-blur-md p-4 rounded-xl border border-white/10 hover:border-accent/60 transition tilt-card">
-          <div class="flex items-center gap-2 mb-3">
-            <div
-              class="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-primary text-xs font-bold">
-              MS</div>
-            <div>
-              <h4 class="text-sm font-semibold">Monitor de Sistemas</h4>
-              <p class="text-[11px] text-text-muted">Equipe de Logistica</p>
+        <div class="fade-in-section">
+          <div
+            class="group testimonial-card bg-white/[0.03] backdrop-blur-xl rounded-3xl p-8 border border-white/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-500 h-full flex flex-col">
+            <div class="flex items-start justify-between mb-6">
+              <div class="flex gap-1"><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-solid fa-star text-accent"></i><i class="fa-solid fa-star text-accent"></i><i
+                  class="fa-regular fa-star text-accent/30"></i><i class="fa-regular fa-star text-accent/30"></i></div>
+              <i class="fa-solid fa-circle-check text-accent/50" title="Verificado"></i>
+            </div>
+            <blockquote class="text-base leading-relaxed mb-6 text-white/80 flex-1">"Processos ágeis melhorando o
+              resultado na captura de erros sistêmicos e correções rápidas."</blockquote>
+            <div class="flex items-center gap-3 pt-6 border-t border-white/10">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center">
+                <span class="text-white font-bold text-sm">MS</span></div>
+              <div>
+                <div class="font-semibold text-sm">Monitor de Sistemas</div>
+                <div class="text-text-muted text-xs">Equipe de Logística</div>
+              </div>
             </div>
           </div>
-          <div class="flex text-accent text-xs mb-2">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-              class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
-          </div>
-          <p class="text-[11px] text-text-muted leading-relaxed">Processos ágeis melhorando o resultado na captura de
-            erros sistemicos e correções.</p>
         </div>
-
       </div>
 
-      <!-- Footer -->
+      <div class="mt-16 text-center fade-in-section">
+        <div
+          class="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+          <i class="fa-solid fa-shield-halved text-accent text-xl"></i>
+          <div class="text-left">
+            <div class="font-semibold text-sm">Depoimentos Verificados</div>
+            <div class="text-xs text-text-muted">Todos os feedbacks são de ambientes corporativos reais</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
+      <i class="fa-solid fa-chart-line absolute top-10 left-10 text-8xl text-accent"></i>
+      <i class="fa-solid fa-code absolute top-20 right-20 text-9xl text-purple-500"></i>
+      <i class="fa-solid fa-database absolute bottom-20 left-20 text-8xl text-blue-500"></i>
+      <i class="fa-solid fa-robot absolute bottom-10 right-10 text-9xl text-cyan-500"></i>
+      <i class="fa-solid fa-lightbulb absolute top-1/2 left-1/3 text-7xl text-yellow-500"></i>
+    </div>
+
+    <div class="max-w-6xl mx-auto relative z-10">
+      <div class="text-center mb-12 fade-in-section">
+        <h2 class="text-3xl md:text-4xl font-bold mb-3 tracking-tight">Blog & Insights</h2>
+        <p class="text-text-muted text-sm max-w-xl mx-auto">Artigos sobre dados, automação e tecnologia</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Post 1 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-chart-line text-accent"></i><span>Data & BI</span><span
+              class="text-white/20">•</span><span>8 min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+            Automatizando relatórios com Python + Power BI</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">Como reduzi 70% do tempo operacional com
+            automação de dados.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+
+        <!-- Post 2 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-truck text-accent"></i><span>Logística</span><span
+              class="text-white/20">•</span><span>6 min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+            KPIs essenciais para operações logísticas</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">O que realmente importa para monitorar
+            eficiência operacional.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+
+        <!-- Post 3 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-mobile-screen text-accent"></i><span>Low-Code</span><span
+              class="text-white/20">•</span><span>5 min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+            AppSheet vs desenvolvimento tradicional</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">Quando usar low-code e quando evitar.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+
+        <!-- Post 4 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-database text-accent"></i><span>Dados</span><span class="text-white/20">•</span><span>7
+              min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+            Modelagem de dados para dashboards eficientes</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">Estruturando dados para performance e
+            escalabilidade.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+
+        <!-- Post 5 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-gear text-accent"></i><span>Automação</span><span class="text-white/20">•</span><span>6
+              min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+            Automação de processos com Apps Script</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">Eliminando tarefas manuais no Google
+            Workspace.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+
+        <!-- Post 6 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-bolt text-accent"></i><span>Performance</span><span
+              class="text-white/20">•</span><span>5 min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+            Reduzindo gargalos em operações reais</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">Estratégias práticas de melhoria
+            contínua.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+
+        <!-- Post 7 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-code text-accent"></i><span>Dev</span><span class="text-white/20">•</span><span>9
+              min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+            Estrutura ideal para projetos de dados</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">Organização de pipelines e arquiteturas
+            escaláveis.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+
+        <!-- Post 8 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-users text-accent"></i><span>Gestão</span><span class="text-white/20">•</span><span>6
+              min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">
+            Cultura data-driven na prática</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">Como mudar comportamento de equipes com
+            dados.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+
+        <!-- Post 9 -->
+        <article
+          class="group blog-card-mini bg-white/[0.03] backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:border-accent/40 hover:-translate-y-1 transition-all duration-300">
+          <div class="flex items-center gap-2 text-xs text-text-muted mb-3"><i
+              class="fa-solid fa-lightbulb text-accent"></i><span>Insights</span><span
+              class="text-white/20">•</span><span>4 min</span></div>
+          <h3 class="text-base font-semibold mb-2 group-hover:text-accent transition-colors line-clamp-2 leading-snug">O
+            futuro do low-code nas empresas</h3>
+          <p class="text-text-muted text-xs mb-3 line-clamp-2 leading-relaxed">Tendências e impacto no mercado
+            corporativo.</p>
+          <a href="#"
+            class="inline-flex items-center gap-1.5 text-accent text-xs font-medium hover:gap-2 transition-all">Ler mais
+            <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </article>
+      </div>
+
       <div class="text-center mt-10 fade-in-section">
-        <p class="text-text-muted text-xs italic flex items-center justify-center gap-2">
-          <i class="fa-solid fa-lock"></i>
-          Depoimentos verificados de ambiente corporativo
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Blog Section - TODOS OS 9 POSTS -->
-  <section id="blog" class="py-24 px-6 relative z-10">
-    <div class="max-w-6xl mx-auto">
-
-      <!-- Header -->
-      <div class="text-center mb-12 fade-in-section">
-        <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">Blog & Insights</h2>
-        <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
-        <p class="text-text-muted mt-4">Análises e ideias sobre dados, automação e transformação digital</p>
-      </div>
-
-      <!-- Grid - TODOS OS 9 POSTS -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-        <!-- Blog 1 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-chart-line text-accent"></i>Data & BI • 8 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">Automatizando relatórios com Python
-            + Power BI</h3>
-          <p class="text-xs text-text-muted line-clamp-2">Como reduzi 70% do tempo operacional com automação de dados.
-          </p>
-        </article>
-
-        <!-- Blog 2 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-truck text-accent"></i>Logística • 6 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">KPIs essenciais para operações
-            logísticas</h3>
-          <p class="text-xs text-text-muted line-clamp-2">O que realmente importa para monitorar eficiência operacional.
-          </p>
-        </article>
-
-        <!-- Blog 3 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-mobile-screen text-accent"></i>Low-Code • 5 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">AppSheet vs desenvolvimento
-            tradicional</h3>
-          <p class="text-xs text-text-muted line-clamp-2">Quando usar low-code e quando evitar.</p>
-        </article>
-
-        <!-- Blog 4 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-database text-accent"></i>Dados • 7 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">Modelagem de dados para dashboards
-            eficientes</h3>
-          <p class="text-xs text-text-muted line-clamp-2">Estruturando dados para performance e escalabilidade.</p>
-        </article>
-
-        <!-- Blog 5 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-gear text-accent"></i>Automação • 6 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">Automação de processos com Apps
-            Script</h3>
-          <p class="text-xs text-text-muted line-clamp-2">Eliminando tarefas manuais no Google Workspace.</p>
-        </article>
-
-        <!-- Blog 6 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-bolt text-accent"></i>Performance • 5 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">Reduzindo gargalos em operações
-            reais</h3>
-          <p class="text-xs text-text-muted line-clamp-2">Estratégias práticas de melhoria contínua.</p>
-        </article>
-
-        <!-- Blog 7 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-code text-accent"></i>Dev • 9 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">Estrutura ideal para projetos de
-            dados</h3>
-          <p class="text-xs text-text-muted line-clamp-2">Organização de pipelines e pipelines escaláveis.</p>
-        </article>
-
-        <!-- Blog 8 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-users text-accent"></i>Gestão • 6 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">Cultura data-driven na prática</h3>
-          <p class="text-xs text-text-muted line-clamp-2">Como mudar comportamento de equipes com dados.</p>
-        </article>
-
-        <!-- Blog 9 -->
-        <article
-          class="group bg-secondary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-2 text-xs text-text-muted mb-3">
-            <i class="fa-solid fa-lightbulb text-accent"></i>Insights • 4 min
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition mb-2">O futuro do low-code nas empresas
-          </h3>
-          <p class="text-xs text-text-muted line-clamp-2">Tendências e impacto no mercado corporativo.</p>
-        </article>
-
-      </div>
-
-      <!-- CTA -->
-      <div class="text-center mt-12">
-        <a href="#contato"
-          class="inline-flex items-center gap-2 bg-accent/20 text-text-muted px-6 py-3 rounded-lg text-sm border border-dashed border-accent hover:bg-accent hover:text-white transition magnetic-btn">
-          <i class="fa-solid fa-bell"></i>
-          Quero ser notificado de novos artigos
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications Section - TODAS AS 8 CERTIFICAÇÕES -->
-  <section id="certificacoes" class="py-24 px-6 bg-secondary relative z-10">
-    <div class="max-w-6xl mx-auto">
-
-      <!-- Header -->
-      <div class="text-center mb-12 fade-in-section">
-        <h2 class="text-3xl md:text-4xl font-bold font-display mb-4">Certificações & Formação</h2>
-        <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
-        <p class="text-text-muted mt-4">Evolução contínua em tecnologia, dados e engenharia de sistemas</p>
-      </div>
-
-      <!-- Grid - TODAS AS 8 CERTIFICAÇÕES -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-        <!-- Cert 1 -->
-        <div
-          class="group bg-primary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-3 mb-3">
-            <i class="fa-solid fa-graduation-cap text-accent"></i>
-            <span class="text-xs text-text-muted">Graduação</span>
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition">Análise e Desenvolvimento de Sistemas
-          </h3>
-          <p class="text-xs text-text-muted mt-1">UNIFATECIE • Cursando</p>
-        </div>
-
-        <!-- Cert 2 -->
-        <div
-          class="group bg-primary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-3 mb-3">
-            <i class="fa-solid fa-database text-accent"></i>
-            <span class="text-xs text-text-muted">Banco de Dados</span>
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition">Administração de Banco de Dados</h3>
-          <p class="text-xs text-text-muted mt-1">Fundação Bradesco • 15h • 2026</p>
-        </div>
-
-        <!-- Cert 3 -->
-        <div
-          class="group bg-primary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-3 mb-3">
-            <i class="fa-solid fa-server text-accent"></i>
-            <span class="text-xs text-text-muted">Banco de Dados</span>
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition">Implementação de Banco de Dados</h3>
-          <p class="text-xs text-text-muted mt-1">Fundação Bradesco • 15h • 2026</p>
-        </div>
-
-        <!-- Cert 4 -->
-        <div
-          class="group bg-primary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-3 mb-3">
-            <i class="fa-solid fa-diagram-project text-accent"></i>
-            <span class="text-xs text-text-muted">Modelagem</span>
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition">Modelagem de Dados</h3>
-          <p class="text-xs text-text-muted mt-1">Fundação Bradesco • 8h • 2026</p>
-        </div>
-
-        <!-- Cert 5 -->
-        <div
-          class="group bg-primary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-3 mb-3">
-            <i class="fa-brands fa-python text-accent"></i>
-            <span class="text-xs text-text-muted">Python</span>
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition">Python OOP</h3>
-          <p class="text-xs text-text-muted mt-1">Fundação Bradesco • 10h • 2024</p>
-        </div>
-
-        <!-- Cert 6 -->
-        <div
-          class="group bg-primary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-3 mb-3">
-            <i class="fa-brands fa-python text-accent"></i>
-            <span class="text-xs text-text-muted">Python</span>
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition">Linguagem Python</h3>
-          <p class="text-xs text-text-muted mt-1">Fundação Bradesco • 18h • 2024</p>
-        </div>
-
-        <!-- Cert 7 -->
-        <div
-          class="group bg-primary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-3 mb-3">
-            <i class="fa-solid fa-brain text-accent"></i>
-            <span class="text-xs text-text-muted">Lógica</span>
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition">Lógica de Programação</h3>
-          <p class="text-xs text-text-muted mt-1">SENAC • 30h • 2013</p>
-        </div>
-
-        <!-- Cert 8 -->
-        <div
-          class="group bg-primary border border-white/10 rounded-xl p-5 hover:-translate-y-1 hover:border-accent transition tilt-card">
-          <div class="flex items-center gap-3 mb-3">
-            <i class="fa-solid fa-microchip text-accent"></i>
-            <span class="text-xs text-text-muted">Hardware</span>
-          </div>
-          <h3 class="text-sm font-semibold group-hover:text-accent transition">Hardware de Computadores</h3>
-          <p class="text-xs text-text-muted mt-1">DATA-ONLINE • 102h • 2012</p>
-        </div>
-
-      </div>
-
-      <!-- Footer Note -->
-      <div class="text-center mt-12">
-        <p class="text-text-muted text-sm flex items-center justify-center gap-2">
-          <i class="fa-solid fa-circle-check text-accent"></i>
-          Formação contínua em evolução constante
-        </p>
+        <a href="#"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-text-muted text-sm hover:border-accent hover:text-accent transition-all duration-300 group">Ver
+          todos os artigos <i
+            class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contato" class="py-20 px-6 relative z-10">
-    <div class="max-w-5xl mx-auto text-center">
-
-      <!-- Title -->
-      <div class="mb-10 fade-in-section">
-        <h2 class="text-3xl md:text-4xl font-bold font-display mb-3">Vamos conversar?</h2>
-        <div class="w-14 h-1 bg-accent mx-auto rounded-full mb-3"></div>
-        <p class="text-text-muted text-sm md:text-base">Interessado em trabalharmos juntos? Entre em contato!</p>
+  <section id="contato" class="py-32 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-purple-600/5 pointer-events-none">
+    </div>
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="text-center mb-16 fade-in-section">
+        <span
+          class="inline-block px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs uppercase tracking-widest font-semibold mb-4">Contato</span>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Vamos Trabalhar Juntos?</h2>
+        <p class="text-text-muted text-lg max-w-xl mx-auto leading-relaxed">Tem um projeto em mente ou quer bater um
+          papo sobre tecnologia? Estou sempre aberto a novas oportunidades.</p>
       </div>
 
-      <!-- Contact Cards -->
-      <div class="flex flex-wrap justify-center gap-4 mb-10">
-
-        <!-- Email -->
+      <div class="grid sm:grid-cols-2 gap-6 mb-16 fade-in-section">
         <a href="mailto:davidgilmour144@gmail.com"
-          class="group flex items-center gap-3 px-5 py-4 bg-accent rounded-2xl border border-accent/20 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-300 w-[280px] magnetic-btn">
-          <div class="icon-box shrink-0 w-[45px]">
-            <i class="fa-solid fa-envelope icon"></i>
+          class="group contact-card bg-white/[0.03] backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           </div>
-          <div class="text-left overflow-hidden leading-tight">
-            <p class="font-semibold text-sm">E-mail</p>
-            <p class="text-white/70 text-xs truncate">davidgilmour144@gmail.com</p>
-          </div>
-        </a>
-
-        <!-- Phone -->
-        <a href="tel:+5586994936797"
-          class="group flex items-center gap-3 px-5 py-4 bg-accent rounded-2xl border border-accent/20 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)] transition-all duration-300 w-[280px] magnetic-btn">
-          <div class="icon-box shrink-0 w-[45px]">
-            <i class="fa-solid fa-phone icon"></i>
-          </div>
-          <div class="text-left leading-tight">
-            <p class="font-semibold text-sm">Telefone</p>
-            <p class="text-white/70 text-xs">(86) 99493-6797</p>
+          <div class="relative z-10">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-purple-600 flex items-center justify-center shadow-lg shadow-accent/30 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-solid fa-envelope text-2xl text-white"></i></div>
+            <h3 class="text-xl font-bold mb-2">E-mail</h3>
+            <p class="text-text-muted text-sm mb-4">Respondo em até 24 horas</p>
+            <div class="flex items-center justify-between"><span
+                class="text-accent font-medium text-sm">davidgilmour144@gmail.com</span><i
+                class="fa-solid fa-arrow-right text-accent group-hover:translate-x-2 transition-transform duration-300"></i>
+            </div>
           </div>
         </a>
 
-      </div>
-
-      <!-- Social Links -->
-      <div class="flex justify-center gap-3 flex-wrap">
-        <a href="https://github.com/dgilmourcode/" target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-text-muted hover:text-accent hover:border-accent/40 hover:-translate-y-1 transition magnetic-btn">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/dgilmourcode/" target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-text-muted hover:text-accent hover:border-accent/40 hover:-translate-y-1 transition magnetic-btn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://www.facebook.com/dgilmourcode/" target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-text-muted hover:text-accent hover:border-accent/40 hover:-translate-y-1 transition magnetic-btn">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.instagram.com/dgilmourcode/" target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-text-muted hover:text-accent hover:border-accent/40 hover:-translate-y-1 transition magnetic-btn">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://wa.me/55086994936797" target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-text-muted hover:text-accent hover:border-accent/40 hover:-translate-y-1 transition magnetic-btn">
-          <i class="fa-brands fa-whatsapp"></i>
+        <a href="https://wa.me/5586994936797" target="_blank"
+          class="group contact-card bg-white/[0.03] backdrop-blur-xl rounded-2xl p-8 border border-white/10 hover:border-accent/40 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          </div>
+          <div class="relative z-10">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <i class="fa-brands fa-whatsapp text-2xl text-white"></i></div>
+            <h3 class="text-xl font-bold mb-2">WhatsApp</h3>
+            <p class="text-text-muted text-sm mb-4">Resposta rápida durante o dia</p>
+            <div class="flex items-center justify-between"><span class="text-accent font-medium text-sm">(86)
+                99493-6797</span><i
+                class="fa-solid fa-arrow-right text-accent group-hover:translate-x-2 transition-transform duration-300"></i>
+            </div>
+          </div>
         </a>
       </div>
 
+      <div class="fade-in-section">
+        <p class="text-center text-text-muted text-sm mb-8 uppercase tracking-widest font-semibold">Ou me encontre nas
+          redes</p>
+        <div class="flex justify-center gap-4 flex-wrap">
+          <a href="https://github.com/dgilmourcode/" target="_blank"
+            class="group social-link w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-accent hover:border-accent hover:-translate-y-2 transition-all duration-300"><i
+              class="fa-brands fa-github text-2xl text-text-muted group-hover:text-white transition-colors"></i></a>
+          <a href="https://www.linkedin.com/in/dgilmourcode/" target="_blank"
+            class="group social-link w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:-translate-y-2 transition-all duration-300"><i
+              class="fa-brands fa-linkedin text-2xl text-text-muted group-hover:text-white transition-colors"></i></a>
+          <a href="https://www.instagram.com/dgilmourcode/" target="_blank"
+            class="group social-link w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 hover:border-transparent hover:-translate-y-2 transition-all duration-300"><i
+              class="fa-brands fa-instagram text-2xl text-text-muted group-hover:text-white transition-colors"></i></a>
+          <a href="https://www.facebook.com/dgilmourcode/" target="_blank"
+            class="group social-link w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#1877F2] hover:border-[#1877F2] hover:-translate-y-2 transition-all duration-300"><i
+              class="fa-brands fa-facebook text-2xl text-text-muted group-hover:text-white transition-colors"></i></a>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center fade-in-section">
+        <a href="mailto:davidgilmour144@gmail.com"
+          class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-accent text-white font-semibold text-lg hover:bg-accent-light hover:scale-105 transition-all duration-300 shadow-2xl shadow-accent/30 group"><i
+            class="fa-solid fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>Enviar
+          Mensagem</a>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-primary border-t border-white/10 py-12 relative z-10">
-    <div class="max-w-7xl mx-auto px-6">
-
-      <!-- Grid de 3 colunas - Melhor alinhamento -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-8">
-
-        <!-- Coluna 1: Copyright -->
-        <div class="text-center md:text-left">
-          <p class="text-text-muted text-sm">
-            &copy; <span id="year"></span> David Gilmour
-          </p>
-          <p class="text-text-muted/40 text-xs mt-1">
-            Todos os direitos reservados
-          </p>
+  <footer class="bg-primary border-t border-white/10 py-16 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-t from-accent/5 to-transparent pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <img src="/src/assets/dgilmourcode_icon.png" alt="Logo" class="h-10 w-10 object-contain">
+            <span class="text-xl font-bold">dgilmour<span class="text-accent">code</span></span>
+          </div>
+          <p class="text-text-muted text-sm leading-relaxed max-w-md mb-6">Desenvolvedor Web & Analista de Dados
+            especializado em BI, automação e soluções escaláveis. Transformando dados em decisões e código em impacto
+            real.</p>
+          <div class="flex items-center gap-2 text-text-muted text-sm"><i
+              class="fa-solid fa-location-dot text-accent"></i><span>Teresina-PI, Brasil</span></div>
         </div>
 
-        <!-- Coluna 2: Menu Rápido (Centralizado) -->
-        <div class="flex flex-wrap justify-center gap-4 md:gap-6">
-          <a href="#sobre" class="text-text-muted hover:text-accent transition-colors text-sm">Sobre</a>
-          <span class="text-text-muted/20 hidden md:inline">•</span>
-          <a href="#projetos" class="text-text-muted hover:text-accent transition-colors text-sm">Projetos</a>
-          <span class="text-text-muted/20 hidden md:inline">•</span>
-          <a href="#experiencia" class="text-text-muted hover:text-accent transition-colors text-sm">Experiência</a>
-          <span class="text-text-muted/20 hidden md:inline">•</span>
-          <a href="#habilidades" class="text-text-muted hover:text-accent transition-colors text-sm">Habilidades</a>
-          <span class="text-text-muted/20 hidden md:inline">•</span>
-          <a href="#certificacoes" class="text-text-muted hover:text-accent transition-colors text-sm">Certificações</a>
+        <div>
+          <h4 class="font-semibold mb-6 text-sm uppercase tracking-wider">Navegação</h4>
+          <ul class="space-y-3">
+            <li><a href="#sobre" class="text-text-muted hover:text-accent transition-colors text-sm">Sobre</a></li>
+            <li><a href="#projetos" class="text-text-muted hover:text-accent transition-colors text-sm">Projetos</a>
+            </li>
+            <li><a href="#experiencia"
+                class="text-text-muted hover:text-accent transition-colors text-sm">Experiência</a></li>
+            <li><a href="#habilidades"
+                class="text-text-muted hover:text-accent transition-colors text-sm">Habilidades</a></li>
+            <li><a href="#certificacoes"
+                class="text-text-muted hover:text-accent transition-colors text-sm">Certificações</a></li>
+          </ul>
         </div>
 
-        <!-- Coluna 3: Localização -->
-        <div class="text-center md:text-right">
-          <p class="text-text-muted/60 text-xs flex items-center justify-center md:justify-end gap-2">
-            <i class="fa-solid fa-location-dot text-accent"></i>
-            <span>Teresina-PI</span>
-          </p>
+        <div>
+          <h4 class="font-semibold mb-6 text-sm uppercase tracking-wider">Contato</h4>
+          <ul class="space-y-3">
+            <li><a href="mailto:davidgilmour144@gmail.com"
+                class="text-text-muted hover:text-accent transition-colors text-sm flex items-center gap-2"><i
+                  class="fa-solid fa-envelope text-xs"></i>davidgilmour144@gmail.com</a></li>
+            <li><a href="https://wa.me/5586994936797"
+                class="text-text-muted hover:text-accent transition-colors text-sm flex items-center gap-2"><i
+                  class="fa-brands fa-whatsapp text-xs"></i>(86) 99493-6797</a></li>
+            <li><a href="https://www.linkedin.com/in/dgilmourcode/"
+                class="text-text-muted hover:text-accent transition-colors text-sm flex items-center gap-2"><i
+                  class="fa-brands fa-linkedin text-xs"></i>LinkedIn</a></li>
+            <li><a href="https://github.com/dgilmourcode/"
+                class="text-text-muted hover:text-accent transition-colors text-sm flex items-center gap-2"><i
+                  class="fa-brands fa-github text-xs"></i>GitHub</a></li>
+          </ul>
         </div>
-
       </div>
 
-      <!-- Linha divisória -->
-      <div class="border-t border-white/5 pt-8">
-
-        <!-- Credits centralizados -->
-        <div class="text-center">
-          <p class="text-text-muted/40 text-xs">
-            Desenvolvido por <span class="text-accent">David Gilmour</span>
-            <span class="mx-2 text-text-muted/20">|</span>
-            <i class="fa-solid fa-robot text-accent mr-1"></i>
-            <span>Inteligência Artificial</span>
-          </p>
+      <div class="border-t border-white/10 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="text-center md:text-left">
+            <p class="text-text-muted/60 text-sm">&copy; <span id="year"></span> David Gilmour. Todos os direitos
+              reservados.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="https://github.com/dgilmourcode/" target="_blank"
+              class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-accent transition-colors"><i
+                class="fa-brands fa-github text-sm text-text-muted hover:text-white"></i></a>
+            <a href="https://www.linkedin.com/in/dgilmourcode/" target="_blank"
+              class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-accent transition-colors"><i
+                class="fa-brands fa-linkedin text-sm text-text-muted hover:text-white"></i></a>
+            <a href="https://www.instagram.com/dgilmourcode/" target="_blank"
+              class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center hover:bg-accent transition-colors"><i
+                class="fa-brands fa-instagram text-sm text-text-muted hover:text-white"></i></a>
+          </div>
+          <div class="text-center md:text-right">
+            <p class="text-text-muted/40 text-xs">Desenvolvido por <span class="text-accent">David Gilmour</span><span
+                class="mx-2 text-text-muted/20">|</span><i
+                class="fa-solid fa-robot text-accent mr-1"></i><span>Inteligência Artificial</span></p>
+          </div>
         </div>
-
       </div>
-
     </div>
   </footer>
 
