@@ -1,8 +1,11 @@
+[![Deploy Status](https://github.com/dgilmourcode/meuportifolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/dgilmourcode/meuportifolio/actions/workflows/deploy.yml)
+
+
 # 🚀 David Gilmour | Portfolio Profissional
 
 Portfolio pessoal desenvolvido com **Vite + Tailwind CSS v3**, focado em performance, acessibilidade e design responsivo.
 
-![Portfolio Preview](./assets/preview.png)
+![Portfolio Preview](./src/assets/portifoliopreview.png.png)
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v3.4.19-38B2AC)](https://tailwindcss.com)
@@ -130,6 +133,9 @@ git init
 ```bash
 # Framework e build tool
 npm install -D vite
+
+# Versao 8 é obrigatorio o esbuild
+npm install -D esbuild
 
 # Tailwind CSS e PostCSS
 npm install -D tailwindcss@3 postcss autoprefixer
