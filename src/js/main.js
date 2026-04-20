@@ -448,9 +448,398 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('✅ Portfolio initialized successfully');
 });
 
+
+
+// ============================================
+// CARROSSEL DE PROJETOS ESTILO APPLE/NETFLIX (AJUSTADO)
+// ============================================
+
+function initCompactProjects() {
+    const sectionContainer = document.getElementById('projects-section-container'); // Wrapper geral
+    const carouselContainer = document.getElementById('projects-carousel');
+    const dotsContainer = document.getElementById('carousel-dots');
+    
+    if (!carouselContainer || !dotsContainer || !sectionContainer) return;
+
+    // Limpa conteúdos anteriores
+    carouselContainer.innerHTML = '';
+    dotsContainer.innerHTML = '';
+
+    // Dados dos Projetos
+    const projectsData = [
+        {
+            title: "Dashboard Operacional",
+            category: "Data & BI",
+            shortDesc: "KPIs em tempo real.",
+            fullDesc: "Ecossistema de dashboards Power BI conectados ao SQL. Automação de relatórios manuais, economizando 15h/semana da equipe.",
+            metrics: [{ label: "Redução Tempo", value: "70%", icon: "fa-clock" }, { label: "Economia", value: "15h", icon: "fa-coins" }],
+            image: "public/assets/img-projetos/dashboard-inteligente.jpg", 
+            tags: ["Power BI", "SQL", "ETL"],
+            link: "#contato"
+        },
+        {
+            title: "AppSheet Processos Ágeis",
+            category: "Low-Code",
+            shortDesc: "Sistemas Mobile Otimizados.",
+            fullDesc: "App mobile low-code para equipes de campo. Sincronização offline/online com Google Sheets, garantindo dados precisos em tempo real.",
+            metrics: [{ label: "Usuários", value: "85+", icon: "fa-users" }, { label: "Uptime", value: "99%", icon: "fa-server" }],
+            image: "public/assets/img-projetos/appsheet-gestao.jpg",
+            tags: ["AppSheet", "Mobile"],
+            link: "https://wa.me/5586994936797"
+        },
+        {
+            title: "Otimização Logística",
+            category: "Processos",
+            shortDesc: "Lean & Dados.",
+            fullDesc: "Análise de gargalos logísticos via Lean Six Sigma. Otimização de rotas e carga, aumentando eficiência em 40%.",
+            metrics: [{ label: "Eficiência", value: "+40%", icon: "fa-chart-line" }, { label: "Entregas", value: "500+", icon: "fa-truck-fast" }],
+            image: "public/assets/img-projetos/otimizacao-logistica.jpg",
+            tags: ["Lean", "Logística"],
+            link: "#contato"
+        },
+        {
+            title: "Governança de Dados",
+            category: "Automação",
+            shortDesc: "Python & Pandas.",
+            fullDesc: "Scripts Python para validação e limpeza automática de grandes volumes de dados. Relatórios de integridade diários por e-mail.",
+            metrics: [{ label: "Auto", value: "100%", icon: "fa-robot" }, { label: "Emails", value: "30+", icon: "fa-envelope" }],
+            image: "public/assets/img-projetos/governanca-dados.jpg",
+            tags: ["Python", "Pandas"],
+            link: "#contato"
+        },
+        {
+            title: "Monitoramento Sistemas",
+            category: "Sistemas",
+            shortDesc: "Custos & Performance.",
+            fullDesc: "Painel de monitoramento proativo de hardware e serviços. Redução de 80% nos custos de manutenção corretiva.",
+            metrics: [{ label: "Custos", value: "-80%", icon: "fa-money-bill-wave" }, { label: "Uptime", value: "99.9%", icon: "fa-heart-pulse" }],
+            image: "public/assets/img-projetos/monitoramento-operacional.jpg",
+            tags: ["Infra", "Monitoramento"],
+            link: "#contato"
+        }
+    ];
+
+        // 1. RENDERIZA FILTROS PEQUENOS E RESPONSIVOS NO TOPO
+    const categories = ["Todos", ...new Set(projectsData.map(p => p.category))];
+    const filterContainer = document.createElement('div');
+    
+    // Classes ajustadas para mobile: overflow-x-auto permite rolar, whitespace-nowrap impede quebra de linha
+    filterContainer.className = "flex gap-2 overflow-x-auto pb-4 mb-6 scrollbar-hide w-full px-1";
+    filterContainer.style.scrollbarWidth = 'none'; // Firefox
+    filterContainer.style.msOverflowStyle = 'none'; // IE/Edge
+
+    filterContainer.innerHTML = categories.map(cat => `
+        <button class="filter-btn whitespace-nowrap px-3 py-1.5 rounded-full text-[10px] md:text-xs font-medium border transition-all duration-300 shrink-0 ${cat === 'Todos' ? 'bg-accent text-white border-accent shadow-lg shadow-accent/20' : 'bg-white/5 text-gray-400 border-white/10 hover:border-accent/50 hover:text-white'}" data-category="${cat}">
+            ${cat}
+        </button>
+    `).join('');
+    
+    // Insere antes do carrossel
+    sectionContainer.insertBefore(filterContainer, carouselContainer); 
+
+    // Lógica de Filtro (Mantida igual)
+    const filterBtns = filterContainer.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => {
+                b.classList.remove('bg-accent', 'text-white', 'border-accent', 'shadow-lg', 'shadow-accent/20');
+                b.classList.add('bg-white/5', 'text-gray-400', 'border-white/10');
+            });
+            btn.classList.remove('bg-white/5', 'text-gray-400', 'border-white/10');
+            btn.classList.add('bg-accent', 'text-white', 'border-accent', 'shadow-lg', 'shadow-accent/20');
+
+            const selectedCat = btn.dataset.category;
+            const cards = carouselContainer.querySelectorAll('.project-card-item');
+            
+            cards.forEach(card => {
+                if (selectedCat === 'Todos' || card.dataset.category === selectedCat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            updateDots();
+        });
+    });
+
+    // 2. RENDERIZA BOLINHAS MINÚSCULAS
+    dotsContainer.className = "flex justify-center gap-1.5 mt-4 w-full";
+    dotsContainer.innerHTML = projectsData.map((_, index) => `
+        <button class="w-1 h-1 rounded-full bg-white/20 transition-all duration-300 hover:bg-accent" data-index="${index}"></button>
+    `).join('');
+    const dots = dotsContainer.querySelectorAll('button');
+
+    function updateDots() {
+        // Calcula qual card está mais visível no centro
+        const scrollLeft = carouselContainer.scrollLeft;
+        const cardWidth = 260 + 12; // Largura do card (w-[260px]) + gap-3 (12px)
+        const activeIndex = Math.round(scrollLeft / cardWidth);
+
+        dots.forEach((dot, index) => {
+            // Verifica se o card correspondente está visível (não oculto pelo filtro)
+            const correspondingCard = carouselContainer.children[index];
+            const isVisible = correspondingCard && correspondingCard.style.display !== 'none';
+
+            if (index === activeIndex && isVisible) {
+                dot.classList.remove('bg-white/20', 'w-1', 'h-1');
+                dot.classList.add('bg-accent', 'w-3', 'h-1'); // Estica levemente a ativa
+            } else {
+                dot.classList.add('bg-white/20', 'w-1', 'h-1', 'rounded-full');
+                dot.classList.remove('bg-accent', 'w-3', 'h-1');
+            }
+        });
+    }
+
+    // 3. RENDERIZA CARDS VERTICAIS ESTREITOS (Estilo Instagram/Story)
+    carouselContainer.className = "flex overflow-x-auto snap-x snap-mandatory gap-3 pb-4 scrollbar-hide w-full px-1";
+    
+    carouselContainer.innerHTML = projectsData.map((proj, index) => `
+        <div class="project-card-item snap-center shrink-0 w-[260px] flex flex-col group cursor-pointer bg-slate-800/40 border border-white/5 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/20" 
+             data-category="${proj.category}"
+             onclick="openCompactModal(${index})">
+            
+            <!-- IMAGEM TOPO (Estilo Capa Vertical) -->
+            <div class="relative w-full h-48 overflow-hidden bg-slate-900">
+                <img src="${proj.image}" alt="${proj.title}" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                     onerror="this.style.opacity='0'">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-800 via-transparent to-transparent opacity-80"></div>
+                
+                <!-- Categoria Minimalista -->
+                <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/50 backdrop-blur-md text-white text-[8px] font-bold uppercase tracking-wider border border-white/10">
+                    ${proj.category}
+                </span>
+            </div>
+
+            <!-- CONTEÚDO COMPACTO -->
+            <div class="p-3 flex flex-col flex-1">
+                <h3 class="text-base font-bold text-white mb-1 leading-tight group-hover:text-accent transition-colors">${proj.title}</h3>
+                <p class="text-gray-400 text-[10px] mb-3 line-clamp-2 leading-relaxed">${proj.shortDesc}</p>
+                
+                <!-- Métricas Mini -->
+                <div class="grid grid-cols-2 gap-2 mb-3">
+                    ${proj.metrics.map(m => `
+                        <div class="flex items-center gap-1.5 p-1.5 rounded bg-white/5 border border-white/5">
+                            <i class="fa-solid ${m.icon} text-accent text-[10px]"></i>
+                            <div>
+                                <div class="text-xs font-bold text-white leading-none">${m.value}</div>
+                                <div class="text-[8px] text-gray-300 mt-1 uppercase">${m.label.split(' ')[0]}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Tags Suaves (Hover Rápido) -->
+                <div class="flex flex-wrap gap-2">
+                    ${proj.tags.map(tag => `
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-medium text-gray-300 transition-all duration-200 hover:border-accent hover:text-white hover:bg-accent">
+                            ${tag}
+                        </span>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `).join('');
+
+    // Event Listeners
+    carouselContainer.addEventListener('scroll', updateDots);
+    
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            const index = parseInt(e.target.dataset.index);
+            const cardWidth = 260 + 12;
+            carouselContainer.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+        });
+    });
+
+    // Inicializa
+    updateDots();
+}
+
+// ============================================
+// MODAL COMPACTO ESTILO NOTION (JANELA FLUTUANTE)
+// ============================================
+window.openCompactModal = function(index) {
+    const projectsData = [
+        {
+            title: "Dashboard Operacional",
+            category: "Data & BI",
+            fullDesc: "Ecossistema de dashboards Power BI conectados ao SQL. Automação de relatórios manuais, economizando 15h/semana da equipe. Implementação de KPIs de eficiência operacional em tempo real.",
+            metrics: [{ label: "Redução Tempo", value: "70%" }, { label: "Economia", value: "15h" }],
+            image: "public/assets/img-projetos/dashboard-inteligente.jpg", 
+            tags: ["Power BI", "SQL", "ETL"],
+            link: "#contato"
+        },
+        {
+            title: "AppSheet Gestão",
+            category: "Low-Code",
+            fullDesc: "App mobile low-code para equipes de campo. Sincronização offline/online com Google Sheets, garantindo dados precisos em tempo real. Redução de erros de digitação em 90%.",
+            metrics: [{ label: "Usuários", value: "85+" }, { label: "Uptime", value: "99%" }],
+            image: "public/assets/img-projetos/appsheet-gestao.jpg",
+            tags: ["AppSheet", "Mobile"],
+            link: "https://wa.me/5586994936797"
+        },
+        {
+            title: "Otimização Logística",
+            category: "Processos",
+            fullDesc: "Análise de gargalos logísticos via Lean Six Sigma. Otimização de rotas e carga, aumentando eficiência em 40%. Integração com sistemas de rastreamento.",
+            metrics: [{ label: "Eficiência", value: "+40%" }, { label: "Entregas", value: "500+" }],
+            image: "public/assets/img-projetos/otimizacao-logistica.jpg",
+            tags: ["Lean", "Logística"],
+            link: "#contato"
+        },
+        {
+            title: "Governança de Dados",
+            category: "Automação",
+            fullDesc: "Scripts Python para validação e limpeza automática de grandes volumes de dados. Relatórios de integridade diários por e-mail. Padronização de nomenclatura e formatos.",
+            metrics: [{ label: "Auto", value: "100%" }, { label: "Emails", value: "30+" }],
+            image: "public/assets/img-projetos/governanca-dados.jpg",
+            tags: ["Python", "Pandas"],
+            link: "#contato"
+        },
+        {
+            title: "Monitoramento Sistemas",
+            category: "Sistemas",
+            fullDesc: "Painel de monitoramento proativo de hardware e serviços. Redução de 80% nos custos de manutenção corretiva. Alertas automáticos via Slack/E-mail.",
+            metrics: [{ label: "Custos", value: "-80%" }, { label: "Uptime", value: "99.9%" }],
+            image: "public/assets/img-projetos/monitoramento-operacional.jpg",
+            tags: ["Infra", "Monitoramento"],
+            link: "#contato"
+        }
+    ];
+
+    const proj = projectsData[index];
+    
+    const modal = document.createElement('div');
+    // Fundo escuro com blur
+    modal.className = 'fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300';
+    
+    // Modal Compacto: max-w-md (aprox 450px) ou max-w-lg (500px). Estreito e alto.
+    modal.innerHTML = `
+        <div class="relative w-full max-w-md bg-slate-900 rounded-3xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 border border-white/10 flex flex-col max-h-[90vh]" id="modal-content">
+            
+            <!-- Botão Fechar -->
+            <button onclick="closeCompactModal()" class="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center hover:bg-white hover:text-black transition-colors backdrop-blur-md">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <!-- Imagem Topo (Menor altura) -->
+            <div class="h-48 w-full bg-slate-800 relative shrink-0">
+                 <img src="${proj.image}" class="w-full h-full object-cover">
+                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+            </div>
+            
+            <!-- Conteúdo Scrollável -->
+            <div class="p-6 overflow-y-auto custom-scrollbar flex-1">
+                <span class="text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-2 block">${proj.category}</span>
+                <h2 class="text-2xl font-bold text-white mb-4 leading-tight">${proj.title}</h2>
+                
+                <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                    ${proj.fullDesc}
+                </p>
+                
+                <!-- Métricas Compactas -->
+                <div class="grid grid-cols-2 gap-3 mb-6">
+                    ${proj.metrics.map(m => `
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5">
+                            <div class="text-lg font-bold text-accent">${m.value}</div>
+                            <div class="text-[10px] text-gray-400 uppercase">${m.label}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                    ${proj.tags.map(tag => `
+                        <span class="px-2 py-1 rounded-md bg-white/10 border border-white/10 text-[10px] font-medium text-gray-200">
+                            ${tag}
+                        </span>
+                    `).join('')}
+                </div>
+
+                <!-- Botão Ação -->
+                <a href="${proj.link}" onclick="closeCompactModal()" class="block w-full py-3 bg-accent text-white rounded-xl font-bold text-sm text-center hover:bg-accent-light transition-colors shadow-lg shadow-accent/20">
+                    Discutir Projeto <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden'; 
+    
+    requestAnimationFrame(() => {
+        modal.style.opacity = '1';
+        document.getElementById('modal-content').classList.remove('scale-95');
+        document.getElementById('modal-content').classList.add('scale-100');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeCompactModal();
+    });
+
+    const handleEsc = (event) => {
+        if (event.key === 'Escape') {
+            closeCompactModal();
+            document.removeEventListener('keydown', handleEsc);
+        }
+    };
+    document.addEventListener('keydown', handleEsc);
+};
+
+window.closeCompactModal = function() {
+    const modal = document.querySelector('.fixed.inset-0.z-\\[100\\]');
+    if (modal) {
+        modal.style.opacity = '0';
+        setTimeout(() => {
+            modal.remove();
+            document.body.style.overflow = '';
+        }, 300);
+    }
+};
+
+document.addEventListener('DOMContentLoaded', initCompactProjects);
+
+
+
+// ============================================
+// ANIMAÇÃO TYPEWRITER (ESTILO VITURE)
+// ============================================
+function initTypewriter() {
+    const textElement = document.getElementById('typewriter-text');
+    if (!textElement) return;
+
+    // O texto que será digitado
+    const textToType = "Desenvolvedor Web & Analista de Dados";
+    let index = 0;
+    const typingSpeed = 100; // Velocidade em ms (quanto menor, mais rápido)
+
+    function type() {
+        if (index < textToType.length) {
+            textElement.textContent += textToType.charAt(index);
+            index++;
+            setTimeout(type, typingSpeed);
+        } else {
+            // Opcional: Remover o cursor piscante após terminar
+            // textElement.classList.remove('border-r-2', 'border-accent');
+        }
+    }
+
+    // Inicia a animação após um pequeno delay para sincronizar com a entrada da página
+    setTimeout(type, 1000);
+}
+
+// Adicione isso dentro do seu DOMContentLoaded existente
+document.addEventListener('DOMContentLoaded', () => {
+    // ... suas outras funções ...
+    initTypewriter();
+});
+
+
 // ============================================
 // 8. EXPORTS (opcional, para testes ou modularização futura)
 // ============================================
+
 
 export {
   debounce,
