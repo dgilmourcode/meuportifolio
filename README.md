@@ -3,7 +3,7 @@
 
 Portfolio pessoal desenvolvido com **Vite + Tailwind CSS v3**, focado em performance, acessibilidade e design responsivo.
 
-![Portfolio Preview](./src/assets/portifoliopreview.png.png)
+![Portfolio Preview](./src/assets/capa-readme/portifoliopreview.webp)
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v3.4.19-38B2AC)](https://tailwindcss.com)
