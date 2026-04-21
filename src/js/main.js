@@ -347,7 +347,7 @@ function initCompactProjects() {
       shortDesc: "KPIs em tempo real.",
       fullDesc: "Ecossistema de dashboards Power BI conectados ao SQL. Automação de relatórios manuais, economizando 15h/semana da equipe.",
       metrics: [{ label: "Redução Tempo", value: "70%", icon: "fa-clock" }, { label: "Economia", value: "15h", icon: "fa-coins" }],
-      image: "src/assets/img-projetos/dashboard-inteligente.webp",
+      image: "assets/img-projetos/dashboard-inteligente.webp",
       tags: ["Power BI", "SQL", "ETL"],
       link: "#contato"
     },
@@ -357,7 +357,7 @@ function initCompactProjects() {
       shortDesc: "Sistemas Mobile Otimizados.",
       fullDesc: "App mobile low-code para equipes de campo. Sincronização offline/online com Google Sheets, garantindo dados precisos em tempo real.",
       metrics: [{ label: "Usuários", value: "85+", icon: "fa-users" }, { label: "Uptime", value: "99%", icon: "fa-server" }],
-      image: "src/assets/img-projetos/appsheet-gestao.webp",
+      image: "assets/img-projetos/appsheet-gestao.webp",
       tags: ["AppSheet", "Mobile"],
       link: "https://wa.me/5586994936797"
     },
@@ -367,7 +367,7 @@ function initCompactProjects() {
       shortDesc: "Lean & Dados.",
       fullDesc: "Análise de gargalos logísticos via Lean Six Sigma. Otimização de rotas e carga, aumentando eficiência em 40%.",
       metrics: [{ label: "Eficiência", value: "+40%", icon: "fa-chart-line" }, { label: "Entregas", value: "500+", icon: "fa-truck-fast" }],
-      image: "src/assets/img-projetos/otimizacao-logistica.webp",
+      image: "assets/img-projetos/otimizacao-logistica.webp",
       tags: ["Lean", "Logística"],
       link: "#contato"
     },
@@ -377,7 +377,7 @@ function initCompactProjects() {
       shortDesc: "Python & Pandas.",
       fullDesc: "Scripts Python para validação e limpeza automática de grandes volumes de dados. Relatórios de integridade diários por e-mail.",
       metrics: [{ label: "Auto", value: "100%", icon: "fa-robot" }, { label: "Emails", value: "30+", icon: "fa-envelope" }],
-      image: "src/assets/img-projetos/governanca-dados.webp",
+      image: "assets/img-projetos/governanca-dados.webp",
       tags: ["Python", "Pandas"],
       link: "#contato"
     },
@@ -387,7 +387,7 @@ function initCompactProjects() {
       shortDesc: "Custos & Performance.",
       fullDesc: "Painel de monitoramento proativo de hardware e serviços. Redução de 80% nos custos de manutenção corretiva.",
       metrics: [{ label: "Custos", value: "-80%", icon: "fa-money-bill-wave" }, { label: "Uptime", value: "99.9%", icon: "fa-heart-pulse" }],
-      image: "src/assets/img-projetos/monitoramento-operacional.webp",
+      image: "assets/img-projetos/monitoramento-operacional.webp",
       tags: ["Infra", "Monitoramento"],
       link: "#contato"
     }
@@ -559,7 +559,7 @@ window.openCompactModal = function (index) {
       category: "Data & BI",
       fullDesc: "Ecossistema de dashboards Power BI conectados ao SQL. Automação de relatórios manuais, economizando 15h/semana da equipe. Implementação de KPIs de eficiência operacional em tempo real.",
       metrics: [{ label: "Redução Tempo", value: "70%" }, { label: "Economia", value: "15h" }],
-      image: "src/assets/img-projetos/dashboard-inteligente.webp",
+      image: "assets/img-projetos/dashboard-inteligente.webp",
       tags: ["Power BI", "SQL", "ETL"],
       link: "#contato"
     },
@@ -568,7 +568,7 @@ window.openCompactModal = function (index) {
       category: "Low-Code",
       fullDesc: "App mobile low-code para equipes de campo. Sincronização offline/online com Google Sheets, garantindo dados precisos em tempo real. Redução de erros de digitação em 90%.",
       metrics: [{ label: "Usuários", value: "85+" }, { label: "Uptime", value: "99%" }],
-      image: "./src/assets/img-projetos/appsheet-gestao.webp",
+      image: "assets/img-projetos/appsheet-gestao.webp",
       tags: ["AppSheet", "Mobile"],
       link: "https://wa.me/5586994936797"
     },
@@ -577,7 +577,7 @@ window.openCompactModal = function (index) {
       category: "Processos",
       fullDesc: "Análise de gargalos logísticos via Lean Six Sigma. Otimização de rotas e carga, aumentando eficiência em 40%. Integração com sistemas de rastreamento.",
       metrics: [{ label: "Eficiência", value: "+40%" }, { label: "Entregas", value: "500+" }],
-      image: "./src/assets/img-projetos/otimizacao-logistica.webp",
+      image: "assets/img-projetos/otimizacao-logistica.webp",
       tags: ["Lean", "Logística"],
       link: "#contato"
     },
@@ -586,7 +586,7 @@ window.openCompactModal = function (index) {
       category: "Automação",
       fullDesc: "Scripts Python para validação e limpeza automática de grandes volumes de dados. Relatórios de integridade diários por e-mail. Padronização de nomenclatura e formatos.",
       metrics: [{ label: "Auto", value: "100%" }, { label: "Emails", value: "30+" }],
-      image: "./src/assets/img-projetos/governanca-dados.webp",
+      image: "assets/img-projetos/governanca-dados.webp",
       tags: ["Python", "Pandas"],
       link: "#contato"
     },
@@ -595,7 +595,7 @@ window.openCompactModal = function (index) {
       category: "Sistemas",
       fullDesc: "Painel de monitoramento proativo de hardware e serviços. Redução de 80% nos custos de manutenção corretiva. Alertas automáticos via Slack/E-mail.",
       metrics: [{ label: "Custos", value: "-80%" }, { label: "Uptime", value: "99.9%" }],
-      image: "./src/assets/img-projetos/monitoramento-operacional.webp",
+      image: "assets/img-projetos/monitoramento-operacional.webp",
       tags: ["Infra", "Monitoramento"],
       link: "#contato"
     }
