@@ -161,14 +161,14 @@ function initScrollAnimations() {
     (entries) => entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
-        observer.unobserve(e.target); // para de observar após revelar
+        observer.unobserve(e.target);
       }
     }),
-    { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0.05, rootMargin: '0px 0px -10px 0px' } // trigger mais cedo
   );
 
   document.querySelectorAll('.fade-in-section').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 80}ms`;
+    el.style.transitionDelay = `${i * 40}ms`; // delay menor entre elementos
     observer.observe(el);
   });
 }
@@ -339,21 +339,29 @@ function initCompactProjects() {
   // --- Filtros ---
   const categories = ['Todos', ...new Set(PROJECTS.map(p => p.category))];
   const filterBar = document.createElement('div');
-  filterBar.className = 'flex gap-2 overflow-x-auto pb-4 mb-6 scrollbar-hide w-full justify-center px-4 md:px-8';
+  // Container externo: permite scroll
+  filterBar.className = 'overflow-x-auto pb-4 mb-6 scrollbar-hide w-full -mx-4 px-4 md:mx-0 md:px-0';
+  filterBar.style.scrollbarWidth = 'none';
+  filterBar.style.msOverflowStyle = 'none';
 
-  filterBar.innerHTML = categories.map(cat => `
-    <button
-      class="filter-btn whitespace-nowrap px-4 py-2 rounded-full text-xs md:text-sm font-medium border transition-all duration-300 shrink-0
-             ${cat === 'Todos'
+  // Container interno: centraliza quando cabe, permite scroll quando não cabe
+  const innerContainer = document.createElement('div');
+  innerContainer.className = 'flex gap-2 w-max mx-auto md:justify-center px-4';
+
+  innerContainer.innerHTML = categories.map(cat => `
+  <button
+    class="filter-btn whitespace-nowrap px-4 py-2 rounded-full text-xs md:text-sm font-medium border transition-all duration-300 shrink-0
+           ${cat === 'Todos'
       ? 'bg-accent text-white border-accent shadow-lg shadow-accent/20'
       : 'bg-white/5 text-gray-400 border-white/10 hover:border-accent/50 hover:text-white'}"
-      data-category="${cat}">${cat}
-    </button>`).join('');
+    data-category="${cat}">${cat}
+  </button>`).join('');
 
+  filterBar.appendChild(innerContainer);
   container.insertBefore(filterBar, carousel);
 
   // --- Cards ---
-  carousel.className = 'flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 scrollbar-hide w-full px-6 md:px-12 items-start';
+  carousel.className = 'flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 scrollbar-hide w-full items-start';
 
   carousel.innerHTML = PROJECTS.map((p, i) => `
     <div class="project-card-item snap-center shrink-0 w-[280px] flex flex-col group cursor-pointer
