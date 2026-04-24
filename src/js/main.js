@@ -35,9 +35,9 @@ const PROJECTS = [
     title: 'Dashboard Operacional',
     category: 'Data & BI',
     shortDesc: 'KPIs em tempo real.',
-    fullDesc: 'Ecossistema de dashboards Power BI conectados ao SQL. Automação de relatórios manuais, economizando 15h/semana da equipe.',
+    fullDesc: 'Ecossistema de dashboards Power BI conectados ao SQL. Automação de relatórios manuais, economizando 15h/semana da equipe. Melhorando as tomadas de decisões e controle de fluxo operacional.',
     metrics: [
-      { label: 'Redução Tempo', value: '70%', icon: 'fa-clock' },
+      { label: 'Redução de Tempo', value: '70%', icon: 'fa-clock' },
       { label: 'Economia', value: '15h', icon: 'fa-coins' },
     ],
     imageFile: 'dashboard-inteligente.webp',
@@ -45,25 +45,25 @@ const PROJECTS = [
     link: '#contato',
   },
   {
-    title: 'AppSheet Processos Ágeis',
+    title: 'ERPs AppSheet',
     category: 'Low-Code',
-    shortDesc: 'Sistemas Mobile Otimizados.',
-    fullDesc: 'App mobile low-code para equipes de campo. Sincronização offline/online com Google Sheets.',
+    shortDesc: 'Sistemas Mobile Otimizados e Integrados.',
+    fullDesc: 'App mobile low-code para equipes de campo e controle logistico. Sincronização offline/online com Google Sheets. Gerando agilidade nas tarefas diárias e controle preciso de informações.',
     metrics: [
       { label: 'Usuários', value: '85+', icon: 'fa-users' },
       { label: 'Uptime', value: '99%', icon: 'fa-server' },
     ],
     imageFile: 'appsheet-gestao.webp',
     tags: ['AppSheet', 'Mobile'],
-    link: 'https://wa.me/5586994936797',
+    link: '#contato',
   },
   {
     title: 'Otimização Logística',
     category: 'Processos Ágeis',
     shortDesc: 'Lean & Dados.',
-    fullDesc: 'Análise de gargalos logísticos via Lean Six Sigma. Otimização de rotas e carga.',
+    fullDesc: 'Análise de gargalos logísticos via Lean Six Sigma. Otimização de rotas e carga. Redução no custos com compra e uso de material.',
     metrics: [
-      { label: 'Eficiência', value: '+40%', icon: 'fa-chart-line' },
+      { label: 'Eficiência', value: '+40%', icon: 'fa-cart-flatbed' },
       { label: 'Entregas', value: '500+', icon: 'fa-truck-fast' },
     ],
     imageFile: 'otimizacao-logistica.webp',
@@ -71,26 +71,26 @@ const PROJECTS = [
     link: '#contato',
   },
   {
-    title: 'Governança de Dados',
-    category: 'Automação',
-    shortDesc: 'Python & Pandas.',
-    fullDesc: 'Scripts Python para validação e limpeza automática de grandes volumes de dados.',
+    title: 'Cultura Data-Driven',
+    category: 'Data-Driven',
+    shortDesc: 'Decisões Estratégicas.',
+    fullDesc: 'Tomada de decisão com embasamento de dados concretos e análises estruturadas a partir de informações coletadas e válidadas.',
     metrics: [
-      { label: 'Auto', value: '100%', icon: 'fa-robot' },
-      { label: 'Emails', value: '30+', icon: 'fa-envelope' },
+      { label: 'Dados', value: '100%', icon: 'fa-chart-pie' },
+      { label: 'Lucro', value: '30+', icon: 'fa-chart-line' },
     ],
     imageFile: 'governanca-dados.webp',
-    tags: ['Python', 'Pandas'],
+    tags: ['Acertividade', 'Redução de Custos'],
     link: '#contato',
   },
   {
     title: 'Monitoramento Sistemas',
     category: 'Sistemas',
     shortDesc: 'Custos & Performance.',
-    fullDesc: 'Painel de monitoramento proativo de hardware e serviços.',
+    fullDesc: 'Painel de monitoramento proativo de hardware e serviços, Análise de Sistemas para identificação de erros e correções em D -1.',
     metrics: [
-      { label: 'Custos', value: '-80%', icon: 'fa-money-bill-wave' },
-      { label: 'Uptime', value: '99.9%', icon: 'fa-heart-pulse' },
+      { label: 'Monitoramento', value: '-80%', icon: 'fa-chart-simple' },
+      { label: 'Sistemas', value: '99.9%', icon: 'fa-windows' },
     ],
     imageFile: 'monitoramento-operacional.webp',
     tags: ['Infra', 'Monitoramento'],
@@ -308,7 +308,7 @@ function initTypewriter() {
   const el = document.getElementById('typewriter-text');
   if (!el) return;
 
-  const text = 'Desenvolvedor Web & Analista de Sistemas e Dados';
+  const text = 'Desenvolvedor Web & Analista de Sistemas';
   let i = 0;
 
   // usa requestAnimationFrame + timestamp para não bloquear a thread
@@ -372,7 +372,7 @@ function initCompactProjects() {
          data-index="${i}">
 
       <div class="relative p-5 pb-3">
-        <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute top-4 right-4 flex gap-2 opacity-30 group-hover:opacity-100 transition-opacity duration-300">
           <i class="fa-solid ${CATEGORY_ICONS[p.category] ?? 'fa-folder'} text-indigo-400 text-sm"></i>
           <i class="fa-solid fa-arrow-up-right-from-square text-gray-400 text-xs group-hover:text-white transition-colors"></i>
         </div>
@@ -410,7 +410,7 @@ function initCompactProjects() {
   // --- Dots ---
   dotsWrap.className = 'flex justify-center gap-2 mt-6 w-full';
   dotsWrap.innerHTML = PROJECTS.map((_, i) =>
-    `<button class="w-2 h-2 rounded-full bg-white/20 transition-all duration-300" data-index="${i}"></button>`
+    `<button class="w-1 h-1 rounded-full bg-white/20 transition-all duration-300" data-index="${i}"></button>`
   ).join('');
 
   const dots = [...dotsWrap.querySelectorAll('button')];
